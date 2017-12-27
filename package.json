@@ -1,0 +1,35 @@
+{
+  "name": "themusicinmyblood",
+  "version": "1.0.0",
+  "description": "The Music In My Blood - a play",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sprakash/themusicinmyblood.git"
+  },
+  "author": "Shubhra Prakash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sprakash/themusicinmyblood/issues"
+  },
+  "homepage": "https://github.com/sprakash/themusicinmyblood#readme",
+  "dependencies": {
+    "autoprefixer": "^7.2.3",
+    "bootswatch": "^4.0.0-beta.2",
+    "gmaps": "^0.4.24",
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-postcss": "^0.9.0",
+    "grunt-responsive-images": "^1.10.1",
+    "http-server": "^0.10.0",
+    "jquery": "^3.2.1",
+    "moment": "^2.20.1",
+    "normalize.css": "^7.0.0",
+    "sass": "^1.0.0-beta.4"
+  }
+}
