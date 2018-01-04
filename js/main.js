@@ -25,8 +25,8 @@ $(document).ready(function(){
 	function growRedline() {
 
       $('.swoosh').animate({width: 'show'}, 2500);
-		setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 3000)}, 800);
-		setTimeout(function() {$('.right-side-nav').animate({'right':'-133px'}, 3000)}, 1000);
+		setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 3000)});
+		setTimeout(function() {$('.right-side-nav').animate({'right':'-133px'}, 3000)});
 		//setInterval(function(){beginCharacters()}, 25000);
 		//setTimeout(function() {beginSlideshow()}, 25000);
 
@@ -61,6 +61,7 @@ $(document).ready(function(){
 
 	function beginCharacters() {
 	    $('.content-area').animate({'opacity': 0}, 20000);
+	    $('.prev-next').animate({'opacity': 1}, 20000);
 		showAjji(25000); 
 		
 
@@ -75,8 +76,8 @@ $(document).ready(function(){
 		}, 110000);
 
 		setTimeout(function() {
-			showVikram(20000);
-		}, 150000);
+			showVikram(25000);
+		}, 200000);
 
 
 	/*
@@ -163,10 +164,6 @@ $(document).ready(function(){
 		console.log(waitTime + " archana");
 
 		$('.active').removeClass('active');
-
-		fadeAjji($("#walter-light"),waitTime+1000);
-		fadeAjji($("#walter-golden"),waitTime+1000);
-		fadeAjji($("#walter-natural"),waitTime+2000);
 
 		$('#archana-light').fadeIn(waitTime);
 		$('#archana-golden').delay(waitTime+5000).fadeIn(waitTime + 2500);

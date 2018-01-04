@@ -75,14 +75,15 @@ body {
 }
 
 .prev-next {
-	display: none;
+	display: flex;
     position: relative;
-    justify-content: center;
-    top: -135px;
     font-size: 25px;
     color: beige;
-    right: -47%;
+    right: -48%;
     cursor: pointer;
+    float: right;
+    top: -145px;
+    opacity: 0;
 }
 
 .next,
