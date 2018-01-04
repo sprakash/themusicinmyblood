@@ -12,7 +12,7 @@ body {
   background-image: url("/assets/bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 960px;
+  height: 800px;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -62,6 +62,75 @@ body {
   height: 10px;
   display: none;
   width: 100%; }
+
+.prev-next {
+  display: none;
+  position: relative;
+  justify-content: center;
+  top: -135px;
+  font-size: 25px;
+  color: beige;
+  right: -47%;
+  cursor: pointer; }
+
+.next,
+.prev {
+  margin-right: .5em; }
+
+.right-side-nav {
+  background-image: url(/assets/menu-right.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  position: fixed;
+  right: -19px;
+  top: -7px;
+  opacity: 0;
+  z-index: 10;
+  width: 18%;
+  background-size: cover; }
+  .right-side-nav :hover {
+    background-image: url(/assets/menu-right-glow.png);
+    cursor: pointer;
+    opacity: 1; }
+  .right-side-nav .first .hovertext {
+    top: 15%;
+    right: 120px; }
+  .right-side-nav .second .hovertext {
+    top: 17%;
+    right: 100px; }
+  .right-side-nav .third .hovertext {
+    top: 27%;
+    right: 133px;
+    width: 300px; }
+  .right-side-nav .fourth .hovertext {
+    top: -5%;
+    right: 125px;
+    width: 177px; }
+  .right-side-nav .fifth .hovertext {
+    top: -7%;
+    right: 165px;
+    width: 178px; }
+  .right-side-nav .sixth .hovertext {
+    top: 14%;
+    right: 154px;
+    width: 190px; }
+  .right-side-nav .seventh .hovertext {
+    top: 17%;
+    right: 100px;
+    width: 157px; }
+  .right-side-nav .hovertext {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    float: left;
+    position: relative;
+    top: 27px;
+    right: 125px;
+    font-family: snell roundhand;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    opacity: 0;
+    cursor: pointer; }
 
 .right-nav {
   width: 4%;
@@ -139,14 +208,24 @@ body {
   height: 100%;
   position: fixed; }
 
-.sitar-knob img {
-  max-width: 200%;
-  display: inline-block;
-  position: absolute;
-  height: auto;
-  right: 100%;
-  top: 10%;
-  margin-top: 10%;
+/*.sitar-knob {
+	 img {
+	 	max-width: 200%;
+	    display: inline-block;
+	    position: absolute;
+	    height: auto;
+	    right: 100%;
+	    top: 10%;
+	    margin-top: 10%;
+	    cursor: pointer;
+	 }
+}*/
+.sitar-knob {
+  max-width: 100%;
+  display: block;
+  position: relative;
+  height: 67px;
+  margin-top: 14%;
   cursor: pointer; }
 
 .play-title {
@@ -208,7 +287,7 @@ body {
   font-size: 1.5em;
   width: 50%;
   font-family: cursive;
-  padding: 1em;
+  padding: 2.5em 1em;
   font-style: italic;
   opacity: 0; }
   .quote em {
@@ -372,9 +451,9 @@ body {
   #vikram-natural .quote {
     float: right;
     margin-right: 7em;
-    color: #16130d;
+    color: whitesmoke;
     margin-top: 3em;
-    width: 50%; }
+    width: 40%; }
 
 #prema1 {
   top: 0;
