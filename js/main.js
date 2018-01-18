@@ -15,6 +15,86 @@ $(document).ready(function(){
 		$('.hovertext').animate({'opacity':0});
 	});
 
+	$('.prev').click(function() {
+
+		if($('.active').hasClass('walter-active')) {
+			$(this).removeClass('active');			
+			showAjji(18000);
+			console.log('stop walter, go back to ajji');
+			return;
+		}
+		if($('.active').hasClass('archana-active')) {
+			$(this).removeClass('active');						
+			showWalter(18000);
+			console.log('stop archie, go back to Walter');
+			return;
+		}
+		if($('.active').hasClass('prema-active')) {		
+			$(this).removeClass('active');			
+			showArchana(18000);
+			console.log('stop prema, go back to archana');
+			return;
+		}
+		if($('.active').hasClass('vikram-active')) {
+			$(this).removeClass('active');			
+			showPrema(18000);
+			console.log('stop vik, go back to prema');
+			return;
+		}
+		if($('.active').hasClass('kamal-active')) {
+			$(this).removeClass('active');					
+			showPrema(18000);
+			console.log('stop kamal, go back to vik');
+			return;
+		}
+		if($('.active').hasClass('ajji-active')) {
+			$(this).removeClass('active');						
+			showPrema(18000);
+			console.log('stop ajji, go back to kamal');
+			return;
+		}
+	});
+
+	$('.next').click(function() {
+
+		if($('.active').hasClass('ajji-active')) {
+			$(this).removeClass('active');
+			showWalter(18000);
+			console.log('stop ajji, go to walter');
+			return;
+		}
+		if($('.active').hasClass('walter-active')) {
+			$(this).removeClass('active');
+			showArchana(18000);
+			console.log('stop walter, go to archie');
+			return;
+		}
+		if($('.active').hasClass('archana-active')) {
+			$(this).removeClass('active');			
+			showPrema(18000);
+			console.log('stop archie, go to prema');
+			return;
+		}
+		if($('.active').hasClass('prema-active')) {
+			$(this).removeClass('active');			
+			showVikram(18000);
+			console.log('stop prema, go to vikram');
+			return;
+		}
+		if($('.active').hasClass('vikram-active')) {
+			$(this).removeClass('active');			
+			showKamal(18000);
+			console.log('stop vik, go to kamal');
+			return;
+		}
+		if($('.active').hasClass('kamal-active')) {
+			$(this).removeClass('active');			
+			showKamal(18000);
+			console.log('stop kamal, go to ajji');
+			return;
+		}
+	});
+
 	var character = $('.character');
 	var ajjiDone = false;
 	var archanaDone = false;
@@ -25,8 +105,8 @@ $(document).ready(function(){
 	function growRedline() {
 
       $('.swoosh').animate({width: 'show'}, 2500);
-		setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 3000)});
-		setTimeout(function() {$('.right-side-nav').animate({'right':'-133px'}, 3000)});
+		setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
+		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
 		//setInterval(function(){beginCharacters()}, 25000);
 		//setTimeout(function() {beginSlideshow()}, 25000);
 
@@ -60,24 +140,22 @@ $(document).ready(function(){
 	}
 
 	function beginCharacters() {
-	    $('.content-area').animate({'opacity': 0}, 20000);
+	    $('.content-area').animate({'opacity': 0}, 30000);
 	    $('.prev-next').animate({'opacity': 1}, 20000);
-		showAjji(25000); 
+		showAjji(8000); 
 		
 
 		setTimeout(function() { 
-			showWalter(18000);
-			$('.active').delay(10000).fadeTo(2000, 0);
-			$('.active').delay(10000).fadeOut(20000);
-		}, 70000);
+			showWalter(8000);
+		}, 20000);
 
 		setTimeout(function() {
-			showArchana(25000);
-		}, 110000);
+			showArchana(8000);
+		}, 30000);
 
 		setTimeout(function() {
-			showVikram(25000);
-		}, 200000);
+			showVikram(8000);
+		}, 60000);
 
 
 	/*
@@ -123,17 +201,17 @@ $(document).ready(function(){
 		var waitTime = parseInt(inTime);
 		console.log(waitTime + " ajji");
 
-		$('#ajji-light').fadeIn(waitTime);
-		$('#ajji-golden').delay(waitTime+5000).fadeIn(waitTime + 2500);
-		$('#ajji-natural').delay(waitTime+5000).fadeTo(waitTime + 5000, 0.7);
-	    $('#ajji-natural > .quote').delay(waitTime+5000).animate({'opacity': 1}, 20000);
-	    $('#ajji-light').addClass('active');
+		$('#ajji-light').addClass('active');
 	    $('#ajji-golden').addClass('active');
 	    $('#ajji-natural').addClass('active');
 
+		$('#ajji-light').fadeIn(waitTime);
+		$('#ajji-golden').delay(waitTime+1000).fadeIn(waitTime + 1500);
+		$('#ajji-natural').delay(waitTime+1000).fadeTo(waitTime + 1000, 0.7);
+	    $('#ajji-natural > .quote').delay(waitTime+1000).animate({'opacity': 1}, 10000);
 	}
 
-	function fadeAjji(character, inTime) {
+	function fadeCharacter(character, inTime) {
 		var waitTime = parseInt(inTime);
 		$(character).animate({'opacity':0}, waitTime);
 		$(character).animate({'opacity':0}, waitTime);
@@ -146,17 +224,18 @@ $(document).ready(function(){
 
 		$('.active').removeClass('active');
 		
-		fadeAjji($("#ajji-light"),waitTime);
-		fadeAjji($("#ajji-golden"),waitTime);
-		fadeAjji($("#ajji-natural"),waitTime);
+		fadeCharacter($("#ajji-light"),waitTime);
+		fadeCharacter($("#ajji-golden"),waitTime);
+		fadeCharacter($("#ajji-natural"),waitTime);
 
-		$('#walter-light').fadeIn(waitTime);
-		$('#walter-golden').delay(waitTime+5000).fadeIn(waitTime + 2500);
-		$('#walter-natural').delay(waitTime+2000).fadeTo(waitTime + 5000, 0.9);
-	    $('#walter-natural > .quote').delay(waitTime+5000).animate({'opacity': 1}, 20000);
-	    $('#walter-light').addClass('active');
+		$('#walter-light').addClass('active');
 	    $('#walter-golden').addClass('active');
 	    $('#walter-natural').addClass('active');
+
+		$('#walter-light').fadeIn(waitTime);
+		$('#walter-golden').delay(waitTime+1000).fadeIn(waitTime + 1500);
+		$('#walter-natural').delay(waitTime+1000).fadeTo(waitTime + 1000, 0.9);
+	    $('#walter-natural > .quote').delay(waitTime+1000).animate({'opacity': 1}, 10000);
 	}
 
 	function showArchana(inTime) {
@@ -165,13 +244,19 @@ $(document).ready(function(){
 
 		$('.active').removeClass('active');
 
-		$('#archana-light').fadeIn(waitTime);
-		$('#archana-golden').delay(waitTime+5000).fadeIn(waitTime + 2500);
-		$('#archana-natural').delay(waitTime+5000).fadeTo(waitTime + 5000, 0.7);
-	    $('#archana-natural > .quote').delay(waitTime+5000).animate({'opacity': 1}, 20000);
+		fadeCharacter($("#walter-light"),waitTime);
+		fadeCharacter($("#walter-golden"),waitTime);
+		fadeCharacter($("#walter-natural"),waitTime);
+
+
 	    $('#archana-light').addClass('active');
 	    $('#archana-golden').addClass('active');
 	    $('#archana-natural').addClass('active');
+
+		$('#archana-light').fadeIn(waitTime);
+		$('#archana-golden').delay(waitTime+1000).fadeIn(waitTime + 1500);
+		$('#archana-natural').delay(waitTime+1000).fadeTo(waitTime + 1000, 0.7);
+	    $('#archana-natural > .quote').delay(waitTime+1000).animate({'opacity': 1}, 10000);
 	}
 
 	function showPrema(inTime) {
@@ -179,13 +264,19 @@ $(document).ready(function(){
 		console.log(waitTime + " prema");
 		
 		$('.active').removeClass('active');
-		$('#prema-light').fadeIn(waitTime);
-		$('#prema-golden').delay(waitTime+5000).fadeIn(waitTime + 2500);
-		$('#prema-natural').delay(waitTime+5000).fadeTo(waitTime + 5000, 0.7);
-	    $('#prema-natural > .quote').delay(waitTime+5000).animate({'opacity': 1}, 20000);
-	    $('#prema-light').addClass('active');
+
+		fadeCharacter($("#archana-light"),waitTime);
+		fadeCharacter($("#archana-golden"),waitTime);
+		fadeCharacter($("#archana-natural"),waitTime);
+
+		$('#prema-light').addClass('active');
 	    $('#prema-golden').addClass('active');
 	    $('#prema-natural').addClass('active');
+		
+		$('#prema-light').fadeIn(waitTime);
+		$('#prema-golden').delay(waitTime+1000).fadeIn(waitTime + 1500);
+		$('#prema-natural').delay(waitTime+1000).fadeTo(waitTime + 1000, 0.7);
+	    $('#prema-natural > .quote').delay(waitTime+1000).animate({'opacity': 1}, 10000);
 	}
 
 	function showVikram(inTime) {
@@ -193,13 +284,23 @@ $(document).ready(function(){
 		console.log(waitTime + " vikram");
 
 		$('.active').removeClass('active');
-		$('#vikram-light').fadeIn(waitTime);
-		$('#vikram-golden').delay(waitTime+5000).fadeIn(waitTime + 2500);
-		$('#vikram-natural').delay(waitTime+5000).fadeTo(waitTime + 5000, 0.6);
-	    $('#vikram-natural > .quote').delay(waitTime+5000).animate({'opacity': 1}, 20000);
-	    $('#vikram-light').addClass('active');
+
+		fadeCharacter($("#prema-light"),waitTime);
+		fadeCharacter($("#prema-golden"),waitTime);
+		fadeCharacter($("#prema-natural"),waitTime);
+
+		$('#vikram-light').addClass('active');
 	    $('#vikram-golden').addClass('active');
 	    $('#vikram-natural').addClass('active');
+		
+		$('#vikram-light').fadeIn(waitTime);
+		$('#vikram-golden').delay(waitTime+1000).fadeIn(waitTime + 1500);
+		$('#vikram-natural').delay(waitTime+1000).fadeTo(waitTime + 1000, 0.7);
+	    $('#vikram-natural > .quote').delay(waitTime+1000).animate({'opacity': 1}, 10000);
+	}
+
+	function resetAllCharacters() {
+		$('.character').animate({'opacity': 0}, 1000);
 	}
 
 

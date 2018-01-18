@@ -1,3 +1,5 @@
+@import 'normalize' ;
+
 html {
     margin: 0; 
 
@@ -15,7 +17,6 @@ body {
     background-image: url('/assets/bg.png'); 
     background-repeat: no-repeat;
     background-size: cover;
-	height: 800px;
     margin: 0;
     padding: 0;
     position: absolute;
@@ -75,20 +76,20 @@ body {
 }
 
 .prev-next {
-	display: flex;
-    position: relative;
+	display: block;
     font-size: 25px;
     color: beige;
-    right: -48%;
     cursor: pointer;
-    float: right;
-    top: -145px;
     opacity: 0;
+    z-index: 6;
+    position: relative;
+    float: right;
+    right: 10%;
 }
 
 .next,
 .prev {
-	margin-right: .5em;
+	margin-right: 1em;
 }
 
 
@@ -132,7 +133,7 @@ body {
 	 .third {
 
 	 	.hovertext {
-	 		top: 27%;
+	 		top: 10%;
 		    right: 133px;
 		    width: 300px;
 	 	}
@@ -142,7 +143,7 @@ body {
 	 .fourth {
 
 	 	.hovertext {
-	 		top: -5%;
+	 		top: -35%;
 		    right: 125px;
 		    width: 177px;
 	 	}
@@ -152,8 +153,8 @@ body {
 	 .fifth {
 
 	 	.hovertext {
-	 		top: -7%;
-    		right: 165px;
+	 		top: -54%;
+    		right: 173px;
     		width: 178px;
 	 	}
 	 }
@@ -162,8 +163,8 @@ body {
 	 .sixth {
 
 	 	.hovertext {
-	 		top: 14%;
-		    right: 154px;
+	 		top: -50%;
+		    right: 160px;
 		    width: 190px;
 	 	}
 	 }
@@ -172,8 +173,8 @@ body {
 	 .seventh {
 
 	 	.hovertext {
-	 		top: 17%;
-	 		right: 100px;
+	 		top: -50%;
+	 		right: 80px;
     		width: 157px;
 	 	}
 	 }
@@ -429,6 +430,16 @@ body {
     }
 }
 
+#character-slideshow {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	position: absolute;
+	width: 100%;
+}
+
 #ajji-natural {
 	top: 0;
     left: 0;
@@ -477,7 +488,7 @@ body {
     width: 100%;
 
     .quote {
-    	padding: 3em 19em!important;
+    	padding: 2em 19em!important;
 	    width: 36%;
 	    text-align: center;
     }
