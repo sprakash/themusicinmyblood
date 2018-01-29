@@ -1,8 +1,8 @@
 $(document).ready(function(){	
-
+	var showwalter, showarchana, showvikram, showajji;
 
 	setTimeout(growRedline(),1000);
-	setTimeout(beginCharacters(), 5000);
+	setTimeout(function(){beginCharacters()}, 7000);
 
 
 	//event handlers
@@ -17,40 +17,132 @@ $(document).ready(function(){
 
 	$('.prev').click(function() {
 
-		if($('.active').hasClass('walter-active')) {
-			$(this).removeClass('active');			
-			showAjji(18000);
+		if($('.active').hasClass('walter-active')) {	
+		
+			$('#walter-light').clearQueue();
+			$('#walter-golden').clearQueue();
+			$('#walter-natural').clearQueue();
+			$('#walter-light').stop();
+			$('#walter-golden').stop();
+			$('#walter-natural').stop();
+			$('.walter-active .quote').stop();
+			$('#ajji-light').clearQueue();
+			$('#ajji-golden').clearQueue();
+			$('#ajji-natural').clearQueue();
+			$('#ajji-light').stop();
+			$('#ajji-golden').stop();
+			$('#ajji-natural').stop();
+			$('.ajji-active .quote').stop();
+			$('.walter-active').removeClass('active');		
+			$('.walter-active,.walter-active .quote').animate({opacity:0}, 8000);
+			
+			$('.ajji-active').css({'opacity':'','display':''});			
+			clearTimeout(showarchana);	
+			clearTimeout(showvikram);
+			setTimeout(
+				function(){
+					showAjji(8000);
+				},2000);
 			console.log('stop walter, go back to ajji');
 			return;
 		}
-		if($('.active').hasClass('archana-active')) {
-			$(this).removeClass('active');						
-			showWalter(18000);
+		
+		if($('.active').hasClass('archana-active')) {			
+			
+			$('#archana-light').clearQueue();
+			$('#archana-golden').clearQueue();
+			$('#archana-natural').clearQueue();
+			$('#archana-light').stop();
+			$('#archana-golden').stop();
+			$('#archana-natural').stop();
+			$('.archana-active .quote').stop();
+			$('#walter-light').clearQueue();
+			$('#walter-golden').clearQueue();
+			$('#walter-natural').clearQueue();
+			$('#walter-light').stop();
+			$('#walter-golden').stop();
+			$('#walter-natural').stop();
+			$('.walter-active .quote').stop();
+			$('.archana-active').removeClass('active');		
+			$('.archana-active,.archana-active .quote').animate({opacity:0}, 8000);
+			
+			$('.walter-active').css({'opacity':'','display':''});		
+			clearTimeout(showvikram);
+			setTimeout(
+				function(){
+					showWalter(8000);
+				},2000);
 			console.log('stop archie, go back to Walter');
 			return;
 		}
+		
 		if($('.active').hasClass('prema-active')) {		
 			$(this).removeClass('active');			
-			showArchana(18000);
+			showArchana(8000);
 			console.log('stop prema, go back to archana');
 			return;
 		}
 		if($('.active').hasClass('vikram-active')) {
-			$(this).removeClass('active');			
-			showPrema(18000);
-			console.log('stop vik, go back to prema');
+			$('#vikram-light').clearQueue();
+			$('#vikram-golden').clearQueue();
+			$('#vikram-natural').clearQueue();
+			$('#vikram-light').stop();
+			$('#vikram-golden').stop();
+			$('#vikram-natural').stop();
+			$('.vikram-active .quote').stop();
+			$('#archana-light').clearQueue();
+			$('#archana-golden').clearQueue();
+			$('#archana-natural').clearQueue();
+			$('#archana-light').stop();
+			$('#archana-golden').stop();
+			$('#archana-natural').stop();
+			$('.archana-active .quote').stop();
+			$('.vikram-active').removeClass('active');		
+			$('.vikram-active,.vikram-active .quote').animate({opacity:0}, 8000);
+			
+			$('.archana-active').css({'opacity':'','display':''});	
+			
+			setTimeout(
+				function(){
+					showArchana(8000);
+				},2000);
+			console.log('stop vik, go back to archana');
 			return;
 		}
 		if($('.active').hasClass('kamal-active')) {
 			$(this).removeClass('active');					
-			showPrema(18000);
+			showPrema(8000);
 			console.log('stop kamal, go back to vik');
 			return;
 		}
-		if($('.active').hasClass('ajji-active')) {
-			$(this).removeClass('active');						
-			showPrema(18000);
-			console.log('stop ajji, go back to kamal');
+		if($('.active').hasClass('ajji-active')) {							
+			
+			$('#ajji-light').clearQueue();
+			$('#ajji-golden').clearQueue();
+			$('#ajji-natural').clearQueue();
+			$('#ajji-light').stop();
+			$('#ajji-golden').stop();
+			$('#ajji-natural').stop();
+			$('.ajji-active .quote').stop();
+			$('#vikram-light').clearQueue();
+			$('#vikram-golden').clearQueue();
+			$('#vikram-natural').clearQueue();
+			$('#vikram-light').stop();
+			$('#vikram-golden').stop();
+			$('#vikram-natural').stop();
+			$('.vikram-active .quote').stop();
+			$('.ajji-active').removeClass('active');		
+			$('.ajji-active,.ajji-active .quote').animate({opacity:0}, 8000);
+			
+			$('.vikram-active').css({'opacity':'','display':''});	
+			clearTimeout(showwalter);
+			clearTimeout(showarchana);
+			clearTimeout(showvikram);
+			setTimeout(
+				function(){
+					showVikram(8000);
+				},2000);
+			console.log('stop ajji, go back to vikram');
 			return;
 		}
 	});
@@ -58,21 +150,89 @@ $(document).ready(function(){
 	$('.next').click(function() {
 
 		if($('.active').hasClass('ajji-active')) {
-			$(this).removeClass('active');
-			showWalter(18000);
+			//$(this).removeClass('active');
+			//showWalter(18000);
+			//console.log('stop ajji, go to walter');
+			//return;
+			
+			$('#ajji-light').clearQueue();
+			$('#ajji-golden').clearQueue();
+			$('#ajji-natural').clearQueue();
+			$('#ajji-light').stop();
+			$('#ajji-golden').stop();
+			$('#ajji-natural').stop();
+			$('.ajji-active .quote').stop();
+			
+			//$('.ajji-active').removeClass('active');		
+			//$('.ajji-active,.ajji-active .quote').animate({opacity:0}, 8000);
+			
+			$('.walter-active,.walter-active .quote').css({'opacity':'','display':''});
+			
+			clearTimeout(showwalter);
+			clearTimeout(showarchana);
+			clearTimeout(showvikram);		
+			
+			setTimeout(
+				function(){
+					showWalter(1000);
+				},2000);
+			
+				
 			console.log('stop ajji, go to walter');
 			return;
+			
 		}
 		if($('.active').hasClass('walter-active')) {
-			$(this).removeClass('active');
-			showArchana(18000);
+			//$(this).removeClass('active');
+			//showArchana(18000);
+			//console.log('stop walter, go to archie');
+			//return;
+			clearTimeout(showarchana);
+			clearTimeout(showvikram);
+			
+			$('#walter-light').clearQueue();
+			$('#walter-golden').clearQueue();
+			$('#walter-natural').clearQueue();
+			$('#walter-light').stop();
+			$('#walter-golden').stop();
+			$('#walter-natural').stop();
+			$('.walter-active .quote').stop();
+			
+			$('.archana-active,.archana-active .quote').css({'opacity':'','display':''});
+			
+			//clearTimeout(showwalter);	
+				
+			setTimeout(
+				function(){
+					showArchana(1000);
+				},2000);			
+			
 			console.log('stop walter, go to archie');
 			return;
 		}
 		if($('.active').hasClass('archana-active')) {
-			$(this).removeClass('active');			
-			showPrema(18000);
+			/*$(this).removeClass('active');			
+			showVikram(18000);
 			console.log('stop archie, go to prema');
+			return;*/
+			
+			$('#archana-light').clearQueue();
+			$('#archana-golden').clearQueue();
+			$('#archana-natural').clearQueue();
+			$('#archana-light').stop();
+			$('#archana-golden').stop();
+			$('#archana-natural').stop();
+			$('.archana-active .quote').stop();
+			
+			$('.vikram-active,.vikram-active .quote').css({'opacity':'','display':''});			
+			
+			clearTimeout(showvikram);			
+			
+			setTimeout(
+				function(){
+					showVikram(1000);
+				},2000);
+			console.log('stop archie, go to vikram');
 			return;
 		}
 		if($('.active').hasClass('prema-active')) {
@@ -82,9 +242,28 @@ $(document).ready(function(){
 			return;
 		}
 		if($('.active').hasClass('vikram-active')) {
-			$(this).removeClass('active');			
-			showKamal(18000);
+			/*$(this).removeClass('active');			
+			showAjji(18000);
 			console.log('stop vik, go to kamal');
+			return;*/
+			
+			$('#vikram-light').clearQueue();
+			$('#vikram-golden').clearQueue();
+			$('#vikram-natural').clearQueue();
+			$('#vikram-light').stop();
+			$('#vikram-golden').stop();
+			$('#vikram-natural').stop();
+			$('.vikram-active .quote').stop();
+			
+			$('.ajji-active,.ajji-active .quote').css({'opacity':'','display':''});			
+			
+			//clearTimeout(showvikram);			
+			
+			setTimeout(
+				function(){
+					showAjji(1000);
+				},2000);
+			console.log('stop vikram, go to ajji');
 			return;
 		}
 		if($('.active').hasClass('kamal-active')) {
@@ -104,7 +283,7 @@ $(document).ready(function(){
 
 	function growRedline() {
 
-      $('.swoosh').animate({width: 'show'}, 2500);
+      $('.swoosh').animate({width: 'show'}, 6000);
 		setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
 		//setInterval(function(){beginCharacters()}, 25000);
@@ -140,22 +319,26 @@ $(document).ready(function(){
 	}
 
 	function beginCharacters() {
-	    $('.content-area').animate({'opacity': 0}, 30000);
-	    $('.prev-next').animate({'opacity': 1}, 20000);
-		showAjji(8000); 
+		console.log('in');
+	    $('.content-area').animate({'opacity': 0}, 10000);
+	    $('.prev-next').animate({'opacity': 1}, 20000);		
 		
+		 
+		showajji = setTimeout(function() { 
+			showAjji(8000);
+		}, 5000);
 
-		setTimeout(function() { 
+		showwalter = setTimeout(function() { 
 			showWalter(8000);
-		}, 20000);
+		}, 25000);
 
-		setTimeout(function() {
+		showarchana = setTimeout(function() {
 			showArchana(8000);
-		}, 30000);
+		}, 45000);		
 
-		setTimeout(function() {
+		showvikram = setTimeout(function() {
 			showVikram(8000);
-		}, 60000);
+		}, 65000);
 
 
 	/*
@@ -200,6 +383,12 @@ $(document).ready(function(){
 	function showAjji(inTime) {
 		var waitTime = parseInt(inTime);
 		console.log(waitTime + " ajji");
+		
+		$('.active').removeClass('active');
+		
+		fadeCharacter($("#vikram-light"),waitTime);
+		fadeCharacter($("#vikram-golden"),waitTime);
+		fadeCharacter($("#vikram-natural"),waitTime);
 
 		$('#ajji-light').addClass('active');
 	    $('#ajji-golden').addClass('active');
@@ -216,6 +405,7 @@ $(document).ready(function(){
 		$(character).animate({'opacity':0}, waitTime);
 		$(character).animate({'opacity':0}, waitTime);
 		$(character).animate({'opacity':0}, waitTime);
+		console.log('in fade char');
 	}
 
 	function showWalter(inTime) {
@@ -285,9 +475,9 @@ $(document).ready(function(){
 
 		$('.active').removeClass('active');
 
-		fadeCharacter($("#prema-light"),waitTime);
-		fadeCharacter($("#prema-golden"),waitTime);
-		fadeCharacter($("#prema-natural"),waitTime);
+		fadeCharacter($("#archana-light"),waitTime);
+		fadeCharacter($("#archana-golden"),waitTime);
+		fadeCharacter($("#archana-natural"),waitTime);
 
 		$('#vikram-light').addClass('active');
 	    $('#vikram-golden').addClass('active');
@@ -302,7 +492,45 @@ $(document).ready(function(){
 	function resetAllCharacters() {
 		$('.character').animate({'opacity': 0}, 1000);
 	}
-
+	
+	$('#menu-button').click(function(){		
+		$(this).parent('#menu-div').siblings('ul').toggleClass('hidden');
+		
+	});
+	
+	$('#storyline-click,#s-storyline').click(function(){		
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
+		$('#character-slideshow,#cast-crew,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#storyline').animate({'opacity': 1}, 6000);
+	});
+	
+	$('#cast-click,#s-cast').click(function(){		
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
+		$('#character-slideshow,#storyline,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#cast-crew').animate({'opacity': 1}, 6000);
+	});
+	$('#characters-click,#s-characters').click(function(){		
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
+		$('#cast-crew,#storyline,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#character-slideshow').animate({'opacity': 1}, 6000);		
+	});
+	
+	$('#upcomingshows-click,#s-upcomingshows').click(function(){		
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
+		$('#cast-crew,#storyline,#character-slideshow,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#upcoming-shows').animate({'opacity': 1}, 6000);
+	});
+	
+	$('#buytickets-click,#s-buytickets').click(function(){	
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');	
+		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#past-productions').animate({'opacity': 0}, 6000);
+		$('#buy-tickets').animate({'opacity': 1}, 6000);
+	});
+	$('#pastproductions-click,#s-pastproductions').click(function(){	
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');	
+		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#buy-tickets').animate({'opacity': 0}, 6000);
+		$('#past-productions').animate({'opacity': 1}, 6000);
+	});
 
 	
 });

@@ -459,7 +459,7 @@ body {
   color: beige;
   cursor: pointer;
   opacity: 0;
-  z-index: 6;
+  z-index: 12;
   position: relative;
   float: right;
   right: 10%; }
@@ -693,7 +693,8 @@ body {
   position: absolute;
   right: 0;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  overflow: hidden; }
 
 #ajji-natural {
   top: 0;
@@ -932,3 +933,388 @@ body {
   left: 10px;
   right: 10px;
   bottom: 10px; }
+
+#cssmenu {
+  display: none; }
+
+#storyline, #cast-crew, #upcoming-shows, #buy-tickets, #past-productions {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: red; }
+
+#cast-crew {
+  background: green; }
+
+#upcoming-shows {
+  background: blue; }
+
+#buy-tickets {
+  background: yellow; }
+
+#past-productions {
+  background: orange; }
+
+#storyline h3, #cast-crew h3, #upcoming-shows h3, #buy-tickets h3, #past-productions h3 {
+  font-size: 2.5em;
+  display: block;
+  text-align: center;
+  padding-top: 10%;
+  text-transform: uppercase; }
+
+#storyline p, #cast-crew p, #upcoming-shows p, #buy-tickets p, #past-productions p {
+  padding: 10px;
+  font-size: 1.5em; }
+
+@media (max-width: 768px) {
+  .swoosh {
+    left: auto; }
+
+  .right-side-nav {
+    display: none; }
+
+  #ajji-natural {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/ajji-natural.JPG) no-repeat center 0px;
+    background-size: cover;
+    z-index: 5;
+    display: none;
+    position: absolute;
+    width: 100%; }
+
+  #ajji-golden {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/ajji-golden.JPG) no-repeat center 0px;
+    background-size: cover;
+    z-index: 5;
+    display: none;
+    position: absolute;
+    width: 100%; }
+
+  #ajji-light {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/ajji-light.JPG) no-repeat center 0px;
+    background-size: cover;
+    z-index: 5;
+    display: none;
+    position: absolute;
+    width: 100%; }
+
+  #walter-natural {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/walter-natural.JPG) no-repeat 10% 0;
+    background-size: cover;
+    z-index: 5;
+    display: none;
+    position: absolute;
+    width: 100%; }
+    #walter-natural .quote {
+      padding: 2em !important;
+      width: auto;
+      text-align: center; }
+
+  #walter-golden {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/walter-golden.JPG) no-repeat 10% 0;
+    background-size: cover;
+    z-index: 5;
+    display: none;
+    position: absolute;
+    width: 100%; }
+
+  #walter-light {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/walter-light.JPG) no-repeat 10% 0;
+    background-size: cover;
+    z-index: 5;
+    display: none;
+    position: absolute;
+    width: 100%; }
+
+  #archana-light {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(/images/final/archana-light.JPG) no-repeat 25% 0px;
+    background-size: cover;
+    z-index: 4;
+    display: none;
+    position: absolute; }
+
+  #archana-golden {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(/images/final/archana-golden.JPG) no-repeat 25% 0px;
+    background-size: cover;
+    z-index: 4;
+    display: none;
+    position: absolute; }
+
+  #archana-natural {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(/images/final/archana-natural.JPG) no-repeat 25% 0px;
+    background-size: cover;
+    z-index: 4;
+    display: none;
+    position: absolute; }
+    #archana-natural .quote {
+      float: right;
+      margin-right: 0em;
+      color: #16130d;
+      margin-top: 0px;
+      width: 45%;
+      padding-top: 20px;
+      padding-right: 10px; }
+
+  #vikram-light {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(/images/final/vikram-light.JPG) no-repeat 27% 0px;
+    background-size: cover;
+    z-index: 4;
+    display: none;
+    position: absolute; }
+    #vikram-light .quote {
+      float: right;
+      margin-right: 7em;
+      color: #16130d;
+      margin-top: 3em;
+      width: 50%; }
+
+  #vikram-golden {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(/images/final/vikram-golden.JPG) no-repeat 27% 0px;
+    background-size: cover;
+    z-index: 4;
+    display: none;
+    position: absolute; }
+    #vikram-golden .quote {
+      float: right;
+      margin-right: 7em;
+      color: #16130d;
+      margin-top: 3em;
+      width: 50%; }
+
+  #vikram-natural {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: url(/images/final/vikram-natural.JPG) no-repeat 27% 0px;
+    background-size: cover;
+    z-index: 4;
+    display: none;
+    position: absolute; }
+    #vikram-natural .quote {
+      float: right;
+      margin-right: 0px;
+      color: whitesmoke;
+      margin-top: 6em;
+      width: 26%; }
+      #vikram-natural .quote em {
+        float: right;
+        margin-right: 0em;
+        margin-top: 0; }
+
+  #prema1 {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/prema1.JPG) no-repeat center -1036px;
+    background-size: 300%;
+    z-index: 3;
+    display: none;
+    position: absolute; }
+    #prema1 .quote {
+      float: left;
+      margin-right: 5em;
+      color: #eee;
+      width: 46%; }
+
+  #prema2 {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/prema2.JPG) no-repeat -75px -529px;
+    background-size: 130%;
+    z-index: 3;
+    display: none;
+    position: absolute; }
+    #prema2 .quote {
+      float: left;
+      margin-right: 3em;
+      margin-top: 4em;
+      color: #eee;
+      width: 45%; }
+
+  #vikram {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/vikram.JPG) no-repeat center center;
+    background-size: cover;
+    z-index: 3;
+    display: none;
+    position: absolute; }
+    #vikram .quote {
+      float: left;
+      margin-right: 3em;
+      margin-top: 4em;
+      color: #eee;
+      width: 45%; }
+
+  #walter {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: url(/images/final/walter.JPG) no-repeat center center;
+    background-size: cover;
+    z-index: 3;
+    display: none;
+    position: absolute; }
+    #walter .quote {
+      float: right;
+      margin-right: -3em;
+      margin-top: -3em;
+      color: white;
+      width: 50%; }
+
+  #cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a, #cssmenu #menu-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  #cssmenu #menu-button {
+    display: none; }
+
+  #cssmenu.small-screen #menu-button {
+    display: block;
+    /*padding: 16px 20px;*/
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #3db2e1; }
+
+  #cssmenu.small-screen #menu-button:before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 27px;
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #ffffff; }
+
+  #cssmenu.small-screen #menu-button:after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    display: block;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    width: 22px;
+    height: 3px; }
+
+  #cssmenu > ul {
+    background: #DEB887; }
+
+  #cssmenu.small-screen > ul, #cssmenu.small-screen.align-center > ul {
+    width: 100%;
+    text-align: left; }
+
+  #cssmenu > ul > li {
+    float: left;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective: 1000px; }
+
+  #cssmenu.small-screen > ul > li, #cssmenu.small-screen.align-center {
+    float: none;
+    display: block;
+    border-top: 1px solid rgba(100, 100, 100, 0.1); }
+
+  #cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a, #cssmenu #menu-button {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  #cssmenu > ul > li > a {
+    padding: 16px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #8B4513;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d; }
+
+  #cssmenu > ul > li.active > a {
+    color: #dff2fa; }
+
+  #cssmenu {
+    z-index: 11; }
+
+  #cssmenu > ul.hidden {
+    display: none; }
+
+  #menu-div {
+    width: 60px;
+    display: block;
+    position: relative;
+    background: transparent;
+    height: 46px; } }

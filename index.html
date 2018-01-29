@@ -10,7 +10,7 @@
         <link rel="manifest" href="site.webmanifest">
         <link rel="apple-touch-icon" href="icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+		<link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/slideshow.css">
         <link rel="stylesheet" href="css/main.css">
@@ -39,7 +39,20 @@
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
        <!-- <embed src="/music/kinareyaman.mp3" autostart="true" loop="true" width="2" height="0"></embed> -->
-
+		<div id="cssmenu" class="dropdown small-screen">
+			<div id='menu-div'>
+				<div id="menu-button" class=""></div>
+			</div>
+			
+		  <ul class="hidden" >
+			 <li class="active"><a id='characters-click' href="javascript:void(0)" data-title="Characters">Characters</a></li>
+			 <li><a id='storyline-click' href="javascript:void(0)" data-title="Storyline">Storyline</a></li>
+			 <li><a id='cast-click' href="javascript:void(0)" data-title="Cast">Cast &amp; Crew</a></li>
+			 <li><a id='upcomingshows-click' href="javascript:void(0)" data-title="UpcomingShows">Upcoming Shows</a></li>
+			 <li><a id='buytickets-click' href="javascript:void(0)" data-title="BuyTickets">Buy Tickets</a></li>
+			 <li><a id='pastproductions-click' href="javascript:void(0)" data-title="BuyTickets">Past Productions</a></li>
+		  </ul>
+		</div>
 
 
        <div class="content-area">
@@ -156,12 +169,12 @@
 	    </div>
 	  </div>
 
-	  <div id="storyline"></div>
-	  <div id="cast-crew"></div>
-	  <div id="past-productions"></div>
+	  <div id="storyline"><h3>Storyline</h3> <p>dkhf ieuier eorio oer ioerioerr ioeoieiru ferof eio e or foerfer</p> </div>
+	  <div id="cast-crew"><h3>Cast and Crew</h3><p>dkhf ieuier eorio oer ioerioerr ioeoieiru ferof eio e or foerfer</p></div>
+	  <div id="past-productions"><h3>Past Productions</h3><p>dkhf ieuier eorio oer ioerioerr ioeoieiru ferof eio e or foerfer</p></div>
 	  <div id="press-audience"></div>
-	 <div id="upcoming-shows"></div>
-	  <div id="buy-tickets"></div>
+	  <div id="upcoming-shows"><h3>Upcoming Shows</h3><p>dkhf ieuier eorio oer ioerioerr ioeoieiru ferof eio e or foerfer</p></div>
+	  <div id="buy-tickets"><h3>Buy Tickets</h3><p>dkhf ieuier eorio oer ioerioerr ioeoieiru ferof eio e or foerfer</p></div>
 
 	   <!-- <div class="right-nav">
 			<div class="whiteborder"></div>
@@ -200,26 +213,26 @@
 
 	    <div class="right-side-nav">
 	    	<div class="sitar-knob first">
-				<span class="hovertext">Characters</span>
+				<span class="hovertext" id='s-characters'>Characters</span>
 			</div>
 			<div class="sitar-knob second">
-				<span class="hovertext">Storyline</span>
+				<span class="hovertext" id='s-storyline'>Storyline</span>
 			
 			</div>
 			<div class="sitar-knob third">
-				<span class="hovertext">Cast &amp; Crew</span>
+				<span class="hovertext" id='s-cast'>Cast &amp; Crew</span>
 			</div>
 			<div class="sitar-knob fourth">
-				<span class="hovertext">Past Productions</span>
+				<span class="hovertext" id='s-pastproductions'>Past Productions</span>
 			</div>
 			<div class="sitar-knob fifth">
 				<span class="hovertext">Press &amp; Audience</span>			
 			</div>
 			<div class="sitar-knob sixth">
-				<span class="hovertext">Upcoming Shows</span>										
+				<span class="hovertext" id='s-upcomingshows'>Upcoming Shows</span>										
 			</div>
 			<div class="sitar-knob seventh">
-				<span class="hovertext">Buy Tickets</span>									
+				<span class="hovertext" id='s-buytickets'>Buy Tickets</span>									
 			</div>
 	    </div>
 
