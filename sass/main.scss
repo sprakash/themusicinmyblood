@@ -755,7 +755,9 @@ body {
  
 @media (max-width: 768px)  
   {
-	.swoosh{left:auto}
+	.swoosh{
+		left:auto;
+		background-size: 100%}
   
 	.right-side-nav {display:none}
   
