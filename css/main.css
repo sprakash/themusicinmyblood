@@ -400,7 +400,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: url("/assets/bg.png");
+  background-image: url("/assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
@@ -943,10 +943,33 @@ body {
   top: 0px;
   width: 100%;
   height: 100%;
-  background: red; }
+  background-image: url(/images/final/walter-baton.JPG);
+  background-size: cover;
+  background-repeat: no-repeat; }
 
-#cast-crew {
-  background: green; }
+.sub-area {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1em 2em;
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  left: -5%;
+  position: relative; }
+  .sub-area h3 {
+    color: #990;
+    padding: 0 !important;
+    margin: 0;
+    font-family: cursive;
+    text-transform: camelcase;
+    font-family: snell roundhand; }
+  .sub-area p {
+    padding: 0 !important;
+    font-family: verdana; }
+
+#cast-crew .cast-list {
+  display: flex; }
+  #cast-crew .cast-list img {
+    max-width: 100%; }
 
 #upcoming-shows {
   background: blue; }
@@ -958,19 +981,24 @@ body {
   background: orange; }
 
 #storyline h3, #cast-crew h3, #upcoming-shows h3, #buy-tickets h3, #past-productions h3 {
-  font-size: 2.5em;
+  font-size: 3.5em;
   display: block;
   text-align: center;
   padding-top: 10%;
-  text-transform: uppercase; }
+  text-transform: camelcase;
+  color: #8B0000; }
 
 #storyline p, #cast-crew p, #upcoming-shows p, #buy-tickets p, #past-productions p {
   padding: 10px;
-  font-size: 1.5em; }
+  font-size: 1em;
+  text-align: left;
+  justify-content: center;
+  line-height: 2em; }
 
 @media (max-width: 768px) {
   .swoosh {
-    left: auto; }
+    left: auto;
+    background-size: 100%; }
 
   .right-side-nav {
     display: none; }
@@ -1255,7 +1283,7 @@ body {
     height: 3px; }
 
   #cssmenu > ul {
-    background: #DEB887; }
+    background: transparent; }
 
   #cssmenu.small-screen > ul, #cssmenu.small-screen.align-center > ul {
     width: 100%;
@@ -1270,7 +1298,7 @@ body {
   #cssmenu.small-screen > ul > li, #cssmenu.small-screen.align-center {
     float: none;
     display: block;
-    border-top: 1px solid rgba(100, 100, 100, 0.1); }
+    border-top: 1px solid rgba(255, 255, 255, 0.1); }
 
   #cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a, #cssmenu #menu-button {
     margin: 0;
@@ -1291,7 +1319,7 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
-    background: #8B4513;
+    background: rgba(255, 255, 255, 0.2);
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -o-transition: all .3s;

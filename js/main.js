@@ -1,8 +1,38 @@
 $(document).ready(function(){	
 	var showwalter, showarchana, showvikram, showajji;
 
-	setTimeout(growRedline(),1000);
-	setTimeout(function(){beginCharacters()}, 7000);
+	var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+	        sParameterName = sURLVariables[i].split('=');
+
+	        if (sParameterName[0] === sParam) {
+	            return sParameterName[1] === undefined ? true : sParameterName[1];
+	        }
+	    }
+	};
+
+	/*http://dummy.com/?technology=jquery&blog=jquerybyexample.
+
+		var tech = getUrlParameter('technology');
+		var blog = getUrlParameter('blog');
+	*/
+
+	var whichpage = getUrlParameter('page');
+
+	if(whichpage === 'storyline') {
+			$('.title-area').hide();
+			showStoryline();
+			setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
+			setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
+	} else {
+		setTimeout(growRedline(),1000);
+		setTimeout(function(){ beginCharacters() }, 7000);
+	}
 
 
 	//event handlers
@@ -10,6 +40,7 @@ $(document).ready(function(){
 		$(this).animate({'opacity': 1});
 		$('.hovertext').animate({'opacity':1});
 	});
+
 	$('.right-side-nav').mouseleave(function() {
 		$(this).animate({'opacity':0.7});
 		$('.hovertext').animate({'opacity':0});
@@ -281,6 +312,10 @@ $(document).ready(function(){
 	var walterDone = false;
 	var vikramDone = false;
 
+	function clearBackground () {
+		$('body').css({'background':'none'});
+	}
+
 	function growRedline() {
 
       $('.swoosh').animate({width: 'show'}, 6000);
@@ -499,19 +534,16 @@ $(document).ready(function(){
 	});
 	
 	$('#storyline-click,#s-storyline').click(function(){		
-		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
-		$('#character-slideshow,#cast-crew,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
-		$('#storyline').animate({'opacity': 1}, 6000);
+		showStoryline();
 	});
 	
 	$('#cast-click,#s-cast').click(function(){		
-		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
-		$('#character-slideshow,#storyline,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
-		$('#cast-crew').animate({'opacity': 1}, 6000);
+		showCastCrew();
 	});
 	$('#characters-click,#s-characters').click(function(){		
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
 		$('#cast-crew,#storyline,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		beginCharacters();
 		$('#character-slideshow').animate({'opacity': 1}, 6000);		
 	});
 	
@@ -531,6 +563,19 @@ $(document).ready(function(){
 		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#buy-tickets').animate({'opacity': 0}, 6000);
 		$('#past-productions').animate({'opacity': 1}, 6000);
 	});
+
+	function showStoryline() {
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
+		$('#character-slideshow,#cast-crew,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#storyline').animate({'opacity': 1}, 6000);
+	}
+
+	function showCastCrew() {
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
+		$('#character-slideshow,#storyline,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#cast-crew').animate({'opacity': 1}, 6000);
+	}
+
 
 	
 });
