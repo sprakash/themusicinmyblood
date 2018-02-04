@@ -28,12 +28,22 @@ $(document).ready(function(){
 			$('.title-area').hide();
 			showStoryline();
 			setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
-			setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
-	} else {
+	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
+	} else if (whichpage === 'upcoming') {
+			$('.title-area').hide();
+			showUpcoming();
+			setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
+	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
+	} else if (whichpage === 'past') {
+			$('.title-area').hide();
+			showPast();
+			setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
+	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
+	}
+	else {
 		setTimeout(growRedline(),1000);
 		setTimeout(function(){ beginCharacters() }, 7000);
 	}
-
 
 	//event handlers
 	$('.right-side-nav').mouseenter(function() {
@@ -540,17 +550,16 @@ $(document).ready(function(){
 	$('#cast-click,#s-cast').click(function(){		
 		showCastCrew();
 	});
+
+	$('#upcomingshows-click, #s-upcomingshows').click(function() {
+		showUpcoming();
+	});
+
 	$('#characters-click,#s-characters').click(function(){		
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
 		$('#cast-crew,#storyline,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
 		beginCharacters();
 		$('#character-slideshow').animate({'opacity': 1}, 6000);		
-	});
-	
-	$('#upcomingshows-click,#s-upcomingshows').click(function(){		
-		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
-		$('#cast-crew,#storyline,#character-slideshow,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
-		$('#upcoming-shows').animate({'opacity': 1}, 6000);
 	});
 	
 	$('#buytickets-click,#s-buytickets').click(function(){	
@@ -559,23 +568,37 @@ $(document).ready(function(){
 		$('#buy-tickets').animate({'opacity': 1}, 6000);
 	});
 	$('#pastproductions-click,#s-pastproductions').click(function(){	
-		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');	
-		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#buy-tickets').animate({'opacity': 0}, 6000);
-		$('#past-productions').animate({'opacity': 1}, 6000);
+		showPast();
 	});
 
 	function showStoryline() {
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
 		$('#character-slideshow,#cast-crew,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
 		$('#storyline').animate({'opacity': 1}, 6000);
+		$('#upcoming-shows').hide();
+
 	}
 
 	function showCastCrew() {
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
 		$('#character-slideshow,#storyline,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#upcoming-shows').hide();
 		$('#cast-crew').animate({'opacity': 1}, 6000);
 	}
 
+	function showPast() {
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');	
+		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#buy-tickets').animate({'opacity': 0}, 6000);
+		$('#upcoming-shows').hide();
+		$('#past-productions').animate({'opacity': 1}, 6000);
+	}
+
+	function showUpcoming() {
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
+		$('#cast-crew,#storyline,#character-slideshow,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#upcoming-shows').show();
+		$('#upcoming-shows').animate({'opacity': 1}, 6000);
+	}
 
 	
 });

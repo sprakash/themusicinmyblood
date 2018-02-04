@@ -937,12 +937,14 @@ body {
 #cssmenu {
   display: none; }
 
-#storyline, #cast-crew, #upcoming-shows, #buy-tickets, #past-productions {
+#storyline, #cast-crew, #upcoming-shows, #buy-tickets, #past-productions, #press-audience {
   opacity: 0;
   position: absolute;
   top: 0px;
   width: 100%;
-  height: 100%;
+  height: 100%; }
+
+#storyline {
   background-image: url(/images/final/walter-baton.JPG);
   background-size: cover;
   background-repeat: no-repeat; }
@@ -966,29 +968,152 @@ body {
     padding: 0 !important;
     font-family: verdana; }
 
-#cast-crew .cast-list {
-  display: flex; }
-  #cast-crew .cast-list img {
-    max-width: 100%; }
+#cast-crew {
+  background-color: #1D232F; }
+  #cast-crew .cast-list {
+    display: none; }
+    #cast-crew .cast-list img {
+      max-width: 100%; }
 
 #upcoming-shows {
-  background: blue; }
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 280%;
+  background-image: url(/assets/curtain.png);
+  background-size: cover;
+  background-repeat: repeat-y; }
+  #upcoming-shows p {
+    font-size: 125% !important;
+    text-align: center !important;
+    justify-content: center !important;
+    font-family: verdana;
+    width: 45%;
+    display: block;
+    margin-left: 28%;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-style: italic; }
+    @media (max-width: 768px) {
+      #upcoming-shows p {
+        font-size: 66% !important;
+        width: 87% !important;
+        margin-left: 4% !important; } }
+  #upcoming-shows h3 {
+    padding-top: 0 !important; }
+  #upcoming-shows h4 {
+    font-family: verdana;
+    font-size: 120%;
+    color: #21345a;
+    background: rgba(223, 242, 250, 0.56);
+    margin: 0;
+    padding: .25em;
+    text-align: center; }
+    @media (max-width: 768px) {
+      #upcoming-shows h4 {
+        font-size: 80%; } }
+  #upcoming-shows .poster-venues {
+    display: block; }
+  #upcoming-shows #nj {
+    width: 100%;
+    margin: 0 1% 2em;
+    display: inline-block;
+    text-align: center; }
+    #upcoming-shows #nj .poster {
+      width: 40%; }
+    #upcoming-shows #nj .stage {
+      width: 30%; }
+  #upcoming-shows #dc {
+    width: 100%;
+    margin: 0 1% 2em;
+    display: inline-block;
+    text-align: center; }
+    #upcoming-shows #dc .poster {
+      width: 20%; }
+    #upcoming-shows #dc .stage {
+      width: 30%; }
+  #upcoming-shows #nyc {
+    width: 100%;
+    margin: 0 1% 2em;
+    display: inline-block;
+    text-align: center; }
+    #upcoming-shows #nyc .stage {
+      width: 50%; }
 
 #buy-tickets {
   background: yellow; }
 
-#past-productions {
-  background: orange; }
+.nobr {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important; }
 
-#storyline h3, #cast-crew h3, #upcoming-shows h3, #buy-tickets h3, #past-productions h3 {
+#past-productions {
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/past-performances.png);
+  background-size: 100% 120%;
+  background-repeat: no-repeat; }
+  @media (max-width: 768px) {
+    #past-productions {
+      background-size: 100% 55%;
+      background-repeat: no-repeat;
+      background-position: 25% 48%; } }
+  #past-productions ul {
+    list-style-type: none;
+    font-family: verdana;
+    text-align: center;
+    font-size: 95%;
+    width: 70%;
+    margin-left: 10%; }
+    @media (max-width: 768px) {
+      #past-productions ul {
+        font-size: 75%; } }
+    #past-productions ul li {
+      color: white;
+      margin-bottom: 1em;
+      display: inline-block; }
+      #past-productions ul li strong {
+        display: inline-block;
+        font-size: 150%;
+        padding-top: .5em;
+        opacity: .6; }
+      #past-productions ul li a {
+        color: white;
+        cursor: pointer;
+        display: inline-block; }
+        #past-productions ul li a img {
+          margin: .5em 0; }
+      #past-productions ul li img {
+        width: 15%;
+        display: inline-block; }
+  #past-productions .credit {
+    bottom: 0;
+    font-size: 8px;
+    float: left;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: 14px;
+    text-transform: camelcase; }
+
+#past-productions h3 {
+  padding-top: 0 !important; }
+
+#storyline h3, #cast-crew h3, #upcoming-shows h3, #buy-tickets h3, #past-productions h3, #press-audience h3 {
   font-size: 3.5em;
   display: block;
   text-align: center;
   padding-top: 10%;
   text-transform: camelcase;
-  color: #8B0000; }
+  color: #8B0000;
+  font-family: snell roundhand; }
 
-#storyline p, #cast-crew p, #upcoming-shows p, #buy-tickets p, #past-productions p {
+#storyline p, #cast-crew p, #upcoming-shows p, #buy-tickets p, #past-productions p, #press-audience p {
   padding: 10px;
   font-size: 1em;
   text-align: left;
