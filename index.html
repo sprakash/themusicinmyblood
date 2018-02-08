@@ -38,7 +38,8 @@
         </script>
         <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
-        <embed src="/music/kinareyaman.mp3" autostart="true" loop="true" width="2" height="0"></embed> 
+        <!--<embed src="/music/kinareyaman.mp3" autostart="true" loop="true" width="2" height="0"></embed> -->
+		
 		<div id="cssmenu" class="dropdown small-screen">
 			<div id='menu-div'>
 				<div id="menu-button" class=""></div>
@@ -48,6 +49,7 @@
 			 <li class="active"><a id='characters-click' href="javascript:void(0)" data-title="Characters">Characters</a></li>
 			 <li><a id='storyline-click' href="javascript:void(0)" data-title="Storyline">Storyline</a></li>
 			 <li><a id='cast-click' href="javascript:void(0)" data-title="Cast">Cast &amp; Crew</a></li>
+			 <li><a id='press-click' href="javascript:void(0)" data-title="Press">Press</a></li>
 			 <li><a id='upcomingshows-click' href="javascript:void(0)" data-title="UpcomingShows">Upcoming Shows</a></li>
 			 <li><a id='buytickets-click' href="javascript:void(0)" data-title="BuyTickets">Buy Tickets</a></li>
 			 <li><a id='pastproductions-click' href="javascript:void(0)" data-title="BuyTickets">Past Productions</a></li>
@@ -204,17 +206,33 @@
 	  <div id="past-productions"><h3>Past Productions</h3>
 	  		<ul>
 	  			<li class="nobr"><strong>2017</strong></li>
-	  			<li class="nobr"><a href="http://2017.satf.us/" target="_blank"><img id="satf" src="/assets/satf.jpg"/></a></li>
+	  			<li class="nobr"><a href="http://2017.satf.us/" target="_blank" onclick="goToSatf();"><img id="satf" src="/assets/satf.jpg"/></a></li>
 	  			<li>Aug 5 12th Annual South Asian Theater Festival by Epic Actors Workshop at Rutgers University New Jersey.</li>
 	  			<br/>
 	  			<li class="nobr"><strong>2016</strong></li>
-	  			<li class="nobr"><a href="http://www.tamashanyc.org/themusicinmyblood" target="_blank"><img id="tamasha" src="/assets/tamasha-logo.png"/></a></li>
-	  			<li>Oct 1 <a href="http://www.tamashanyc.org/themusicinmyblood">Tamasha : A Festival of South Asian Performing Arts</a> at Paradise Factory, New York City. </li>
+	  			<li class="nobr"><a href="http://www.tamashanyc.org/themusicinmyblood" target="_blank" onclick="goToTamasha();"><img id="tamasha" src="/assets/tamasha-logo.png"/></a></li>
+	  			<li>Oct 1 <a href="http://www.tamashanyc.org/themusicinmyblood" target="_blank">Tamasha : A Festival of South Asian Performing Arts</a> at Paradise Factory, New York City. </li>
 	  		</ul>
 	  		<div class="credit">Photo from 2017 SATF. Featured Cast : Meera Narasimhan, Hannah Marks, Vaibhav Jain, Radhika Mehrotra, Monica Sharma, Rachit Trehan, Aanya Rastogi, Michael Gentile. Singers: Susmita Chakraborty, Sandip Bhattacharjee and Amod Dandawate.</div>
 		</div>
-	  <div id="press-audience">
-	  	<h3>All of Press from Priya's email</h3>
+	  <div id="press">
+	  	<div id="press-area">
+	  		<h3>Press</h3>
+	  		<div id="press-content">
+	  			<ul id="press-list">
+	  				<li><div>
+	  					<iframe width="320" height="240" src="https://www.youtube.com/embed/jqodlcEz_aA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	  					<a href="https://www.youtube.com/watch?v=jqodlcEz_aA">2017: TVAsia Channel features “The Music In My Blood”</a></div></li>
+	  				<li><div><img src="/assets/broadway-world-logo.png"/><a href="https://www.broadwayworld.com/off-off-broadway/article/BWW-Interview-Arpita-Mukherjee-and-Shubhra-Prakash-of-Hypokrit-Theatre-Company-20170727">2017: An Interview on BroadwayWorld.com</a></div></li>
+	  				<li><div><img src="/assets/stage-buddy-logo.jpg"/><a href="https://stagebuddy.com/theater/theater-review/review-music-blood">2016: StageBuddy reviews "The Music In My Blood" at Tamasha : A Festival of South Asian Performing Arts.</a></div></li>
+	  			</ul>
+	  			
+	  			<div id="press-releases">
+				  	<a class="press-release" href="https://drive.google.com/file/d/0B9LvifPLtAmLcVNwaW5obVhuVTA/view" target="_blank">Download 2017 Press Release</a>
+				  	<a class="press-release" href="https://static1.squarespace.com/static/570c4e2acf80a178016dfa56/t/57eaa574f7e0abae9fab3c2d/1474995573065/TheMusicInMyBlood-PressRelease.pdf" target="_blank">Download 2016 Press Release</a>
+			   </div>
+	  		</div>	
+		  </div>
 	  </div>
 	  <div id="upcoming-shows"><h3>Upcoming Shows</h3>
 	  	<p> In 2018, The Music In My Blood looks forward to two invited performances in March and April and a New York City run at the highly acclaimed Off-broadway American Theatre of Actors in June. </p>
@@ -243,7 +261,9 @@
 	  <div id="buy-tickets"><h3>Buy Tickets</h3>
 	  	<p>linke to Event Combo</p>
 	  </div>
-
+        <audio src="/music/kinareyaman.mp3" controls  controlsList="nodownload" autoplay loop>	
+			<p>your browser doesn't support playing our music.</p>
+		</audio>
 	    <div class="right-side-nav">
 	    	<div class="sitar-knob first">
 				<span class="hovertext" id='s-characters'>Characters</span>
@@ -259,7 +279,7 @@
 				<span class="hovertext" id='s-pastproductions'>Past Productions</span>
 			</div>
 			<div class="sitar-knob fifth">
-				<span class="hovertext">Press &amp; Audience</span>			
+				<span class="hovertext" id='s-press'>Press</span>			
 			</div>
 			<div class="sitar-knob sixth">
 				<span class="hovertext" id='s-upcomingshows'>Upcoming Shows</span>										

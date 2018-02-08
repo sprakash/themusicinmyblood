@@ -39,11 +39,17 @@ $(document).ready(function(){
 			showPast();
 			setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
 	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
+	} else if (whichpage === 'press') {
+			$('.title-area').hide();
+			showPress();
+			setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
+	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
 	}
 	else {
 		setTimeout(growRedline(),1000);
 		setTimeout(function(){ beginCharacters() }, 7000);
 	}
+
 
 	//event handlers
 	$('.right-side-nav').mouseenter(function() {
@@ -322,6 +328,14 @@ $(document).ready(function(){
 	var walterDone = false;
 	var vikramDone = false;
 
+	function goToSatf() {
+		location.href= 'http://2017.satf.us';
+	}
+
+	function goToTamasha() {
+		location.href= 'http://www.tamashanyc.org/themusicinmyblood';
+	}
+
 	function clearBackground () {
 		$('body').css({'background':'none'});
 	}
@@ -563,17 +577,19 @@ $(document).ready(function(){
 	});
 	
 	$('#buytickets-click,#s-buytickets').click(function(){	
-		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');	
-		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#past-productions').animate({'opacity': 0}, 6000);
-		$('#buy-tickets').animate({'opacity': 1}, 6000);
+		location.href="https://www.eventcombo.com/e/The-Music-In-My-Blood---A-play-in-two-acts-30782";
 	});
 	$('#pastproductions-click,#s-pastproductions').click(function(){	
 		showPast();
 	});
+	$('#press-click, #s-press').click(function(){
+		showPress();
+	});
 
 	function showStoryline() {
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
-		$('#character-slideshow,#cast-crew,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#character-slideshow,#cast-crew,#upcoming-shows,#buy-tickets,#past-productions,#press').animate({'opacity': 0}, 6000);
+		$('#press').hide();
 		$('#storyline').animate({'opacity': 1}, 6000);
 		$('#upcoming-shows').hide();
 
@@ -581,25 +597,36 @@ $(document).ready(function(){
 
 	function showCastCrew() {
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
-		$('#character-slideshow,#storyline,#upcoming-shows,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#character-slideshow,#storyline,#upcoming-shows,#buy-tickets,#past-productions,#press').animate({'opacity': 0}, 6000);
+		$('#press').hide();
 		$('#upcoming-shows').hide();
 		$('#cast-crew').animate({'opacity': 1}, 6000);
 	}
 
 	function showPast() {
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');	
-		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#buy-tickets').animate({'opacity': 0}, 6000);
+		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#buy-tickets,#press').animate({'opacity': 0}, 6000);
+		$('#press').hide();
 		$('#upcoming-shows').hide();
+		$('#past-productions').css({'zIndex':10});
 		$('#past-productions').animate({'opacity': 1}, 6000);
 	}
 
 	function showUpcoming() {
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
-		$('#cast-crew,#storyline,#character-slideshow,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#cast-crew,#storyline,#character-slideshow,#buy-tickets,#past-productions,#press').animate({'opacity': 0}, 6000);
+		$('#press').hide();
 		$('#upcoming-shows').show();
 		$('#upcoming-shows').animate({'opacity': 1}, 6000);
 	}
 
+	function showPress() {
+		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
+		$('#cast-crew,#storyline,#character-slideshow,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
+		$('#upcoming-shows').hide();
+		$('#press').show();
+		$('#press').animate({'opacity': 1}, 6000);
+	}
 	
 });
 

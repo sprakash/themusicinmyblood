@@ -396,6 +396,12 @@ body {
   font-size: 14px;
   font-family: "Playfair Display"; }
 
+audio {
+  display: inline-block;
+  position: fixed;
+  bottom: 6px;
+  z-index: 12; }
+
 .content-area {
   width: 100%;
   display: flex;
@@ -433,6 +439,9 @@ body {
   margin-top: .5em;
   font-size: 1.2em;
   letter-spacing: 3px; }
+  @media (max-width: 768px) {
+    .twoacts {
+      font-size: .5em; } }
 
 .divider {
   border-color: red transparent transparent transparent;
@@ -499,7 +508,7 @@ body {
     width: 177px; }
   .right-side-nav .fifth .hovertext {
     top: -54%;
-    right: 173px;
+    right: 60px;
     width: 178px; }
   .right-side-nav .sixth .hovertext {
     top: -50%;
@@ -558,8 +567,8 @@ body {
   .right-nav .fifth img {
     top: 45%; }
   .right-nav .fifth .hovertext {
-    top: 47%;
-    right: 845px;
+    top: 40%;
+    right: 80px;
     width: 157px; }
   .right-nav .sixth img {
     top: 60%; }
@@ -680,7 +689,8 @@ body {
   font-family: cursive;
   padding: 2.5em 1em;
   font-style: italic;
-  opacity: 0; }
+  opacity: 0;
+  line-height: 2em; }
   .quote em {
     float: right;
     margin-right: 3em;
@@ -937,7 +947,7 @@ body {
 #cssmenu {
   display: none; }
 
-#storyline, #cast-crew, #upcoming-shows, #buy-tickets, #past-productions, #press-audience {
+#storyline, #cast-crew, #upcoming-shows, #buy-tickets, #past-productions, #press {
   opacity: 0;
   position: absolute;
   top: 0px;
@@ -1042,8 +1052,84 @@ body {
     #upcoming-shows #nyc .stage {
       width: 50%; }
 
-#buy-tickets {
-  background: yellow; }
+#press {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background-image: url(/assets/title-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10; }
+  #press h3 {
+    font-size: 3.5em;
+    display: block;
+    text-align: center;
+    padding-top: 1% !important;
+    text-transform: camelcase;
+    color: #d6a223 !important;
+    font-family: snell roundhand; }
+    @media (max-width: 768px) {
+      #press h3 {
+        margin: .3em; } }
+  #press-area {
+    background: rgba(22, 19, 13, 0.65);
+    background-repeat: repeat-y;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: inline-block; }
+  #press-content {
+    color: #d6a223; }
+    #press-content ul {
+      list-style: none;
+      display: inline-block;
+      margin: 0 28%;
+      font-size: 1.2em;
+      font-family: verdana; }
+      @media (max-width: 768px) {
+        #press-content ul {
+          font-size: 1em; } }
+      @media (max-width: 768px) {
+        #press-content ul {
+          margin: 0; } }
+      #press-content ul li {
+        float: left;
+        clear: both;
+        margin-bottom: 2em; }
+        #press-content ul li .year {
+          margin-bottom: 2em; }
+        #press-content ul li div {
+          display: flex; }
+          @media (max-width: 768px) {
+            #press-content ul li div {
+              display: block; } }
+          #press-content ul li div strong {
+            margin-right: 2em; }
+          #press-content ul li div img {
+            vertical-align: middle;
+            margin: 0 .5em;
+            width: 15%;
+            height: 10%; }
+    #press-content a {
+      color: #d6a223;
+      margin-left: 1em;
+      cursor: pointer;
+      line-height: 1.7em; }
+      @media (max-width: 768px) {
+        #press-content a {
+          margin-left: 0;
+          display: block; } }
+  #press-releases {
+    margin: 0 auto;
+    text-align: center;
+    font-family: verdana; }
+    #press-releases h4 {
+      text-align: center;
+      color: #d6a223;
+      margin: 2em 0; }
 
 .nobr {
   margin-bottom: 0 !important;
@@ -1062,7 +1148,7 @@ body {
     #past-productions {
       background-size: 100% 55%;
       background-repeat: no-repeat;
-      background-position: 25% 48%; } }
+      background-position: 25% 40%; } }
   #past-productions ul {
     list-style-type: none;
     font-family: verdana;
@@ -1082,6 +1168,9 @@ body {
         font-size: 150%;
         padding-top: .5em;
         opacity: .6; }
+        @media (max-width: 768px) {
+          #past-productions ul li strong {
+            padding-top: 1.2em; } }
       #past-productions ul li a {
         color: white;
         cursor: pointer;
@@ -1102,9 +1191,10 @@ body {
     text-transform: camelcase; }
 
 #past-productions h3 {
-  padding-top: 0 !important; }
+  padding-top: 0 !important;
+  margin-bottom: 0; }
 
-#storyline h3, #cast-crew h3, #upcoming-shows h3, #buy-tickets h3, #past-productions h3, #press-audience h3 {
+#storyline h3, #cast-crew h3, #upcoming-shows h3, #buy-tickets h3, #past-productions h3, #press h3 {
   font-size: 3.5em;
   display: block;
   text-align: center;
@@ -1113,7 +1203,7 @@ body {
   color: #8B0000;
   font-family: snell roundhand; }
 
-#storyline p, #cast-crew p, #upcoming-shows p, #buy-tickets p, #past-productions p, #press-audience p {
+#storyline p, #cast-crew p, #upcoming-shows p, #buy-tickets p, #past-productions p, #press p {
   padding: 10px;
   font-size: 1em;
   text-align: left;
@@ -1440,11 +1530,11 @@ body {
   #cssmenu > ul > li > a {
     padding: 16px 20px;
     font-size: 14px;
-    color: #ffffff;
+    color: brown;
     letter-spacing: 1px;
     text-transform: uppercase;
     text-decoration: none;
-    background: rgba(255, 255, 255, 0.2);
+    background: white;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     -o-transition: all .3s;
@@ -1456,9 +1546,9 @@ body {
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d; }
 
-  #cssmenu > ul > li.active > a {
-    color: #dff2fa; }
-
+  /*#cssmenu > ul > li.active > a {
+      color: #dff2fa;
+  }*/
   #cssmenu {
     z-index: 11; }
 
