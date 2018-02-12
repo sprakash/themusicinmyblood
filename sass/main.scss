@@ -45,7 +45,7 @@ audio {
 .title-bg {
 	img {
 		max-width: 100%;
-		padding-bottom: 2em;
+		padding-bottom: .5em;
 	}
 }
 
@@ -53,9 +53,8 @@ audio {
 .twoacts {
 	margin: 0 auto;
     color: #cecece;
-    font-family: verdana;
+    font-family: pt serif;
     text-align: center;
-    margin-top: .5em;
     font-size: 1.2em;
     letter-spacing: 3px;
 
@@ -76,14 +75,28 @@ audio {
     border-radius: 3px;
 }
 
+.motif {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 0 !important;
+
+    @media (max-width: 768px)  {
+        max-width: 50% !important;
+    }
+
+
+}
+
 .swoosh {
-	background-image: url(/assets/swoosh.png);
+	background-image: url(/assets/swoosh-2.png);
 	background-repeat: no-repeat;
     left: 15%;
     position: relative;
     height: 10px;
     display: none;
     width: 100%;
+    top: -10px;
 }
 
 .prev-next {
