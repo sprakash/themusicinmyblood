@@ -384,6 +384,7 @@ $(document).ready(function(){
 	}
 
 	function beginCharacters() {
+		$('#cast-crew').hide() //this div extends due to content so hiding it
 		console.log('in');
 	    $('.content-area').animate({'opacity': 0}, 10000);
 	    $('.prev-next').animate({'opacity': 1}, 20000);		
