@@ -340,6 +340,70 @@ audio {
 	 }
 }
 
+.contact-info {
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    z-index: 12;
+    position: fixed;
+    bottom: 0;
+    right: 15%;
+    font-family: verdana;
+    border-radius: 5px;
+    padding: .25em .5em;
+
+    @media (max-width: 768px)  {
+        top: 0;
+        bottom: auto;
+        right: 0%;
+        border-radius: 0;
+        background: none;
+        z-index: 13;
+    }
+
+
+    .desktop-only {
+        @media (max-width: 768px)  {
+            display: none;
+        }
+
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        color: white;
+        margin: 1em auto;
+        padding: 0;
+
+        li {
+            margin: 0 .5em;
+
+            &:hover {
+                cursor: pointer;
+                color: #8B0000;
+            }
+
+            a {
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+
+                &:hover {
+                    color: #8B0000;
+                }
+            }
+
+            .fa {
+                cursor: pointer;
+
+                &:hover {
+                    color: #8B0000;
+                }
+            }
+        }
+    }
+}
+
 .whiteborder{
 	border-right: 1px solid white;
     height: 100%;
@@ -357,18 +421,6 @@ audio {
     position: fixed;
 }
 
-/*.sitar-knob {
-	 img {
-	 	max-width: 200%;
-	    display: inline-block;
-	    position: absolute;
-	    height: auto;
-	    right: 100%;
-	    top: 10%;
-	    margin-top: 10%;
-	    cursor: pointer;
-	 }
-}*/
 
 .sitar-knob {
 	max-width: 100%;
@@ -832,6 +884,10 @@ audio {
                         font-size: .875em;
                  }
             }
+        }
+
+        .music-list {
+            padding-bottom: 3em;
         }
 
         h3 {

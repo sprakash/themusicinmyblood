@@ -604,6 +604,49 @@ audio {
     opacity: 0;
     cursor: pointer; }
 
+.contact-info {
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  z-index: 12;
+  position: fixed;
+  bottom: 0;
+  right: 15%;
+  font-family: verdana;
+  border-radius: 5px;
+  padding: .25em .5em; }
+  @media (max-width: 768px) {
+    .contact-info {
+      top: 0;
+      bottom: auto;
+      right: 0%;
+      border-radius: 0;
+      background: none;
+      z-index: 13; } }
+  @media (max-width: 768px) {
+    .contact-info .desktop-only {
+      display: none; } }
+  .contact-info ul {
+    list-style-type: none;
+    display: flex;
+    color: white;
+    margin: 1em auto;
+    padding: 0; }
+    .contact-info ul li {
+      margin: 0 .5em; }
+      .contact-info ul li:hover {
+        cursor: pointer;
+        color: #8B0000; }
+      .contact-info ul li a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none; }
+        .contact-info ul li a:hover {
+          color: #8B0000; }
+      .contact-info ul li .fa {
+        cursor: pointer; }
+        .contact-info ul li .fa:hover {
+          color: #8B0000; }
+
 .whiteborder {
   border-right: 1px solid white;
   height: 100%;
@@ -617,18 +660,6 @@ audio {
   height: 100%;
   position: fixed; }
 
-/*.sitar-knob {
-	 img {
-	 	max-width: 200%;
-	    display: inline-block;
-	    position: absolute;
-	    height: auto;
-	    right: 100%;
-	    top: 10%;
-	    margin-top: 10%;
-	    cursor: pointer;
-	 }
-}*/
 .sitar-knob {
   max-width: 100%;
   display: block;
@@ -1025,6 +1056,8 @@ audio {
           padding: .2em 0;
           margin: .2em 0;
           font-size: .875em; }
+    #cast-crew .cast-list .music-list {
+      padding-bottom: 3em; }
     #cast-crew .cast-list h3 {
       color: white !important;
       padding: 0 0 .5em !important;
