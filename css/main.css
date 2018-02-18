@@ -988,11 +988,23 @@ audio {
     font-family: verdana; }
 
 #cast-crew {
-  background-color: #1D232F; }
+  background-color: #1D232F;
+  width: 100%;
+  display: block; }
+  #cast-crew h3 {
+    margin: 0;
+    padding-top: 3% !important; }
   #cast-crew .cast-list {
-    display: none; }
-    #cast-crew .cast-list img {
-      max-width: 100%; }
+    display: flex;
+    width: 100%; }
+  #cast-crew .crew-list {
+    width: 70%;
+    display: block;
+    margin: 0 auto; }
+    #cast-crew .crew-list .member {
+      margin: 1em 3em; }
+      #cast-crew .crew-list .member .write-up {
+        border: 1px solid beige; }
 
 #upcoming-shows {
   display: none;

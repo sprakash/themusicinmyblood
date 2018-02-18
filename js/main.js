@@ -44,6 +44,11 @@ $(document).ready(function(){
 			showPress();
 			setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
 	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
+	} else if (whichpage === 'castcrew') {
+			$('.title-area').hide();
+			showCastCrew();
+			setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
+	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
 	}
 	else {
 		setTimeout(growRedline(),1000);
@@ -342,9 +347,9 @@ $(document).ready(function(){
 
 	function growRedline() {
 
-      $('.swoosh').animate({width: 'show'}, 6000);
-		setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 8000)});
-		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
+      $('.swoosh').animate({width: 'show'}, 3000);
+		setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 6000)});
+		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 3000)});
 		//setInterval(function(){beginCharacters()}, 25000);
 		//setTimeout(function() {beginSlideshow()}, 25000);
 
