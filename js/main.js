@@ -51,6 +51,7 @@ $(document).ready(function(){
 	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
 	}
 	else {
+		$('#cast-crew').hide();
 		setTimeout(growRedline(),1000);
 		setTimeout(function(){ beginCharacters() }, 7000);
 	}
@@ -595,6 +596,7 @@ $(document).ready(function(){
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
 		$('#character-slideshow,#cast-crew,#upcoming-shows,#buy-tickets,#past-productions,#press').animate({'opacity': 0}, 6000);
 		$('#press').hide();
+		$('#cast-crew').hide();
 		$('#storyline').animate({'opacity': 1}, 6000);
 		$('#upcoming-shows').hide();
 
@@ -605,6 +607,7 @@ $(document).ready(function(){
 		$('#character-slideshow,#storyline,#upcoming-shows,#buy-tickets,#past-productions,#press').animate({'opacity': 0}, 6000);
 		$('#press').hide();
 		$('#upcoming-shows').hide();
+		$('#cast-crew').show();
 		$('#cast-crew').animate({'opacity': 1}, 6000);
 	}
 
@@ -613,6 +616,7 @@ $(document).ready(function(){
 		$('#cast-crew,#storyline,#character-slideshow,#upcoming-shows,#buy-tickets,#press').animate({'opacity': 0}, 6000);
 		$('#press').hide();
 		$('#upcoming-shows').hide();
+		$('#cast-crew').hide();
 		$('#past-productions').css({'zIndex':10});
 		$('#past-productions').animate({'opacity': 1}, 6000);
 	}
@@ -621,6 +625,7 @@ $(document).ready(function(){
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
 		$('#cast-crew,#storyline,#character-slideshow,#buy-tickets,#past-productions,#press').animate({'opacity': 0}, 6000);
 		$('#press').hide();
+		$('#cast-crew').hide();
 		$('#upcoming-shows').show();
 		$('#upcoming-shows').animate({'opacity': 1}, 6000);
 	}
@@ -629,6 +634,7 @@ $(document).ready(function(){
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
 		$('#cast-crew,#storyline,#character-slideshow,#buy-tickets,#past-productions').animate({'opacity': 0}, 6000);
 		$('#upcoming-shows').hide();
+		$('#cast-crew').hide();
 		$('#press').show();
 		$('#press').animate({'opacity': 1}, 6000);
 	}

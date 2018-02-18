@@ -719,7 +719,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/ajji-natural.JPG) no-repeat center -95px;
+  background: url(/images/final/ajji-natural.jpg) no-repeat center -95px;
   background-size: cover;
   z-index: 5;
   display: none;
@@ -730,7 +730,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/ajji-golden.JPG) no-repeat center -95px;
+  background: url(/images/final/ajji-golden.jpg) no-repeat center -95px;
   background-size: cover;
   z-index: 5;
   display: none;
@@ -741,7 +741,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/ajji-light.JPG) no-repeat center -95px;
+  background: url(/images/final/ajji-light.jpg) no-repeat center -95px;
   background-size: cover;
   z-index: 5;
   display: none;
@@ -752,7 +752,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/walter-natural.JPG) no-repeat center -140px;
+  background: url(/images/final/walter-natural.jpg) no-repeat center -140px;
   background-size: cover;
   z-index: 5;
   display: none;
@@ -767,7 +767,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/walter-golden.JPG) no-repeat center -140px;
+  background: url(/images/final/walter-golden.jpg) no-repeat center -140px;
   background-size: cover;
   z-index: 5;
   display: none;
@@ -778,7 +778,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/walter-light.JPG) no-repeat center -140px;
+  background: url(/images/final/walter-light.jpg) no-repeat center -140px;
   background-size: cover;
   z-index: 5;
   display: none;
@@ -790,7 +790,7 @@ audio {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(/images/final/archana-light.JPG) no-repeat center -20px;
+  background: url(/images/final/archana-light.jpg) no-repeat center -20px;
   background-size: cover;
   z-index: 4;
   display: none;
@@ -801,7 +801,7 @@ audio {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(/images/final/archana-golden.JPG) no-repeat center -20px;
+  background: url(/images/final/archana-golden.jpg) no-repeat center -20px;
   background-size: cover;
   z-index: 4;
   display: none;
@@ -812,7 +812,7 @@ audio {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(/images/final/archana-natural.JPG) no-repeat center -20px;
+  background: url(/images/final/archana-natural.jpg) no-repeat center -20px;
   background-size: cover;
   z-index: 4;
   display: none;
@@ -829,7 +829,7 @@ audio {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(/images/final/vikram-light.JPG) no-repeat center -20px;
+  background: url(/images/final/vikram-light.jpg) no-repeat center -20px;
   background-size: cover;
   z-index: 4;
   display: none;
@@ -846,7 +846,7 @@ audio {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(/images/final/vikram-golden.JPG) no-repeat center -20px;
+  background: url(/images/final/vikram-golden.jpg) no-repeat center -20px;
   background-size: cover;
   z-index: 4;
   display: none;
@@ -863,7 +863,7 @@ audio {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(/images/final/vikram-natural.JPG) no-repeat center -20px;
+  background: url(/images/final/vikram-natural.jpg) no-repeat center -20px;
   background-size: cover;
   z-index: 4;
   display: none;
@@ -879,7 +879,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/prema1.JPG) no-repeat center -1036px;
+  background: url(/images/final/prema1.jpg) no-repeat center -1036px;
   background-size: 300%;
   z-index: 3;
   display: none;
@@ -894,7 +894,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/prema2.JPG) no-repeat -75px -529px;
+  background: url(/images/final/prema2.jpg) no-repeat -75px -529px;
   background-size: 130%;
   z-index: 3;
   display: none;
@@ -910,7 +910,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/vikram.JPG) no-repeat center center;
+  background: url(/images/final/vikram.jpg) no-repeat center center;
   background-size: cover;
   z-index: 3;
   display: none;
@@ -926,7 +926,7 @@ audio {
   top: 0;
   left: 0;
   bottom: 0;
-  background: url(/images/final/walter.JPG) no-repeat center center;
+  background: url(/images/final/walter.jpg) no-repeat center center;
   background-size: cover;
   z-index: 3;
   display: none;
@@ -964,7 +964,7 @@ audio {
   height: 100%; }
 
 #storyline {
-  background-image: url(/images/final/walter-baton.JPG);
+  background-image: url(/images/final/walter-baton.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -990,21 +990,117 @@ audio {
 #cast-crew {
   background-color: #1D232F;
   width: 100%;
-  display: block; }
+  display: block;
+  height: auto; }
   #cast-crew h3 {
     margin: 0;
     padding-top: 3% !important; }
   #cast-crew .cast-list {
-    display: flex;
-    width: 100%; }
+    display: block;
+    width: 70%;
+    margin: 0 auto; }
+    #cast-crew .cast-list .members {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      clear: both; }
+      #cast-crew .cast-list .members .member {
+        margin: 1em .5em;
+        display: block;
+        cursor: pointer; }
+        @media (max-width: 768px) {
+          #cast-crew .cast-list .members .member {
+            margin: 0 0 3em 0; } }
+        #cast-crew .cast-list .members .member img {
+          border: 1px solid beige; }
+        #cast-crew .cast-list .members .member span {
+          margin: 0 auto;
+          color: white;
+          display: block;
+          text-align: center;
+          font-family: verdana;
+          letter-spacing: .1em;
+          background-color: #8B0000;
+          color: beige;
+          padding: .2em 0;
+          margin: .2em 0;
+          font-size: .875em; }
+    #cast-crew .cast-list h3 {
+      color: white !important;
+      padding: 0 0 .5em !important;
+      display: block;
+      margin: 0 auto; }
+    #cast-crew .cast-list hr {
+      border-color: #8B0000;
+      margin: 2em 0; }
   #cast-crew .crew-list {
     width: 70%;
     display: block;
     margin: 0 auto; }
+    @media (max-width: 550px) {
+      #cast-crew .crew-list {
+        width: 100%; } }
     #cast-crew .crew-list .member {
-      margin: 1em 3em; }
-      #cast-crew .crew-list .member .write-up {
+      margin: 2em 3em;
+      display: flex;
+      cursor: pointer; }
+      @media (max-width: 1160px) {
+        #cast-crew .crew-list .member {
+          display: block; } }
+      #cast-crew .crew-list .member .photo-caption span {
+        margin: 0 auto;
+        color: white;
+        display: block;
+        text-align: center;
+        font-family: verdana;
+        letter-spacing: .1em;
+        background-color: #8B0000;
+        color: beige;
+        padding: .2em .5em;
+        margin: .2em 0;
+        font-size: .875em;
+        line-height: 1.5em;
+        display: flex; }
+        @media (max-width: 1160px) {
+          #cast-crew .crew-list .member .photo-caption span {
+            margin: 0 auto 1em; } }
+        @media (max-width: 768px) {
+          #cast-crew .crew-list .member .photo-caption span {
+            width: 100%; } }
+      #cast-crew .crew-list .member .photo-caption .madison {
+        width: 96%;
+        padding: .5em;
+        line-height: 1.5em; }
+        @media (max-width: 1160px) {
+          #cast-crew .crew-list .member .photo-caption .madison {
+            margin: 0 auto 1em; } }
+        @media (max-width: 768px) {
+          #cast-crew .crew-list .member .photo-caption .madison {
+            width: 100%; } }
+      #cast-crew .crew-list .member .photo-caption img {
         border: 1px solid beige; }
+      @media (max-width: 1160px) {
+        #cast-crew .crew-list .member .photo-caption {
+          text-align: center;
+          display: inline-block; } }
+      #cast-crew .crew-list .member .write-up {
+        margin: 0 2.5em;
+        width: 100%;
+        font-family: verdana;
+        line-height: 2em;
+        text-align: justify;
+        color: #a0a09a;
+        font-weight: lighter;
+        min-width: 324px; }
+        @media (max-width: 1160px) {
+          #cast-crew .crew-list .member .write-up {
+            margin: 0; } }
+        @media (max-width: 768px) {
+          #cast-crew .crew-list .member .write-up {
+            margin: 2em 0 4em; } }
+        #cast-crew .crew-list .member .write-up a {
+          color: #a0a09a;
+          cursor: pointer; }
 
 #upcoming-shows {
   display: none;
@@ -1243,7 +1339,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/ajji-natural.JPG) no-repeat center 0px;
+    background: url(/images/final/ajji-natural.jpg) no-repeat center 0px;
     background-size: cover;
     z-index: 5;
     display: none;
@@ -1254,7 +1350,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/ajji-golden.JPG) no-repeat center 0px;
+    background: url(/images/final/ajji-golden.jpg) no-repeat center 0px;
     background-size: cover;
     z-index: 5;
     display: none;
@@ -1265,7 +1361,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/ajji-light.JPG) no-repeat center 0px;
+    background: url(/images/final/ajji-light.jpg) no-repeat center 0px;
     background-size: cover;
     z-index: 5;
     display: none;
@@ -1276,7 +1372,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/walter-natural.JPG) no-repeat 10% 0;
+    background: url(/images/final/walter-natural.jpg) no-repeat 10% 0;
     background-size: cover;
     z-index: 5;
     display: none;
@@ -1291,7 +1387,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/walter-golden.JPG) no-repeat 10% 0;
+    background: url(/images/final/walter-golden.jpg) no-repeat 10% 0;
     background-size: cover;
     z-index: 5;
     display: none;
@@ -1302,7 +1398,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/walter-light.JPG) no-repeat 10% 0;
+    background: url(/images/final/walter-light.jpg) no-repeat 10% 0;
     background-size: cover;
     z-index: 5;
     display: none;
@@ -1314,7 +1410,7 @@ audio {
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(/images/final/archana-light.JPG) no-repeat 25% 0px;
+    background: url(/images/final/archana-light.jpg) no-repeat 25% 0px;
     background-size: cover;
     z-index: 4;
     display: none;
@@ -1325,7 +1421,7 @@ audio {
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(/images/final/archana-golden.JPG) no-repeat 25% 0px;
+    background: url(/images/final/archana-golden.jpg) no-repeat 25% 0px;
     background-size: cover;
     z-index: 4;
     display: none;
@@ -1336,7 +1432,7 @@ audio {
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(/images/final/archana-natural.JPG) no-repeat 25% 0px;
+    background: url(/images/final/archana-natural.jpg) no-repeat 25% 0px;
     background-size: cover;
     z-index: 4;
     display: none;
@@ -1355,7 +1451,7 @@ audio {
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(/images/final/vikram-light.JPG) no-repeat 27% 0px;
+    background: url(/images/final/vikram-light.jpg) no-repeat 27% 0px;
     background-size: cover;
     z-index: 4;
     display: none;
@@ -1372,7 +1468,7 @@ audio {
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(/images/final/vikram-golden.JPG) no-repeat 27% 0px;
+    background: url(/images/final/vikram-golden.jpg) no-repeat 27% 0px;
     background-size: cover;
     z-index: 4;
     display: none;
@@ -1389,7 +1485,7 @@ audio {
     left: 0;
     bottom: 0;
     right: 0;
-    background: url(/images/final/vikram-natural.JPG) no-repeat 27% 0px;
+    background: url(/images/final/vikram-natural.jpg) no-repeat 27% 0px;
     background-size: cover;
     z-index: 4;
     display: none;
@@ -1409,7 +1505,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/prema1.JPG) no-repeat center -1036px;
+    background: url(/images/final/prema1.jpg) no-repeat center -1036px;
     background-size: 300%;
     z-index: 3;
     display: none;
@@ -1424,7 +1520,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/prema2.JPG) no-repeat -75px -529px;
+    background: url(/images/final/prema2.jpg) no-repeat -75px -529px;
     background-size: 130%;
     z-index: 3;
     display: none;
@@ -1440,7 +1536,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/vikram.JPG) no-repeat center center;
+    background: url(/images/final/vikram.jpg) no-repeat center center;
     background-size: cover;
     z-index: 3;
     display: none;
@@ -1456,7 +1552,7 @@ audio {
     top: 0;
     left: 0;
     bottom: 0;
-    background: url(/images/final/walter.JPG) no-repeat center center;
+    background: url(/images/final/walter.jpg) no-repeat center center;
     background-size: cover;
     z-index: 3;
     display: none;
