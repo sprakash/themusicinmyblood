@@ -505,7 +505,6 @@ audio {
   width: 18%;
   background-size: cover; }
   .right-side-nav :hover {
-    background-image: url(/assets/menu-right-glow.png);
     cursor: pointer;
     opacity: 1; }
   .right-side-nav .first .hovertext {
