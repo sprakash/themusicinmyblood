@@ -394,7 +394,8 @@ html {
 
 body {
   font-size: 14px;
-  font-family: "Playfair Display"; }
+  font-family: "Playfair Display";
+  background-color: black; }
 
 audio {
   display: inline-block;
@@ -409,7 +410,7 @@ audio {
   background-image: url("/assets/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin: 0;
+  margin: 5em 0;
   padding: 0;
   position: absolute;
   top: 0;
@@ -418,18 +419,24 @@ audio {
   bottom: 0; }
 
 .title-area {
-  width: 50%;
   height: 50%;
   position: absolute;
   margin: auto;
   top: 0;
   right: 0;
   bottom: 0;
-  left: 0; }
+  left: 0;
+  padding: 0 3em; }
 
-.title-bg img {
-  max-width: 100%;
-  padding-bottom: .5em; }
+.title-bg {
+  display: block;
+  margin: 0 auto; }
+  .title-bg img {
+    padding-bottom: .5em;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%; }
 
 .twoacts {
   margin: 0 auto;
@@ -440,7 +447,7 @@ audio {
   letter-spacing: 3px; }
   @media (max-width: 768px) {
     .twoacts {
-      font-size: .5em; } }
+      font-size: 1em; } }
 
 .divider {
   border-color: red transparent transparent transparent;
@@ -464,7 +471,7 @@ audio {
 .swoosh {
   background-image: url(/assets/swoosh-2.png);
   background-repeat: no-repeat;
-  left: 15%;
+  left: 30%;
   position: relative;
   height: 10px;
   display: none;
@@ -528,7 +535,7 @@ audio {
     right: 80px;
     width: 157px; }
   .right-side-nav .hovertext {
-    color: white;
+    color: beige;
     font-size: 1.5em;
     font-weight: bold;
     float: left;
@@ -998,6 +1005,8 @@ audio {
   background-image: url(/images/final/walter-baton.jpg);
   background-size: cover;
   background-repeat: no-repeat; }
+  #storyline .sub-area p {
+    color: white; }
 
 .sub-area {
   background: rgba(255, 255, 255, 0.2);
@@ -1053,8 +1062,7 @@ audio {
           letter-spacing: .1em;
           background-color: #8B0000;
           color: beige;
-          padding: .2em 0;
-          margin: .2em 0;
+          padding: .2em .5em;
           font-size: .875em; }
     #cast-crew .cast-list .music-list {
       padding-bottom: 3em; }
@@ -1089,8 +1097,6 @@ audio {
         letter-spacing: .1em;
         background-color: #8B0000;
         color: beige;
-        padding: .2em .5em;
-        margin: .2em 0;
         font-size: .875em;
         line-height: 1.5em;
         display: flex; }
@@ -1107,11 +1113,9 @@ audio {
         @media (max-width: 1160px) {
           #cast-crew .crew-list .member .photo-caption .madison {
             margin: 0 auto 1em; } }
-        @media (max-width: 768px) {
-          #cast-crew .crew-list .member .photo-caption .madison {
-            width: 100%; } }
       #cast-crew .crew-list .member .photo-caption img {
-        border: 1px solid beige; }
+        border: 1px solid beige;
+        width: 100%; }
       @media (max-width: 1160px) {
         #cast-crew .crew-list .member .photo-caption {
           text-align: center;
@@ -1212,7 +1216,8 @@ audio {
   background-image: url(/assets/title-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 10; }
+  z-index: 10;
+  margin: 5em 0; }
   #press h3 {
     font-size: 3.5em;
     display: block;
