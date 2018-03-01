@@ -51,9 +51,8 @@ $(document).ready(function(){
 	 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 5000)});
 	}
 	else {
-		$('#cast-crew').hide();
 		setTimeout(growRedline(),1000);
-		//setTimeout(function(){ beginCharacters() }, 7000);
+		setTimeout(function(){ beginCharacters() }, 7000);
 	}
 
 
@@ -348,7 +347,7 @@ $(document).ready(function(){
 
 	function growRedline() {
 
-      $('.swoosh').animate({width: 'show'}, 3000);
+      $('.swoosh').animate({width: '100%'}, 3000);
 		setTimeout(function() {$('.right-side-nav').animate({'opacity':.7}, 6000)});
 		setTimeout(function() {$('.right-side-nav').animate({'right':'-100px'}, 3000)});
 		//setInterval(function(){beginCharacters()}, 25000);
@@ -384,7 +383,6 @@ $(document).ready(function(){
 	}
 
 	function beginCharacters() {
-		$('#cast-crew').hide() //this div extends due to content so hiding it
 		console.log('in');
 	    $('.content-area').animate({'opacity': 0}, 10000);
 	    $('.prev-next').animate({'opacity': 1}, 20000);		
@@ -606,10 +604,10 @@ $(document).ready(function(){
 	function showCastCrew() {
 		$('#menu-button').parent('#menu-div').siblings('ul').toggleClass('hidden');
 		$('#character-slideshow,#storyline,#upcoming-shows,#buy-tickets,#past-productions,#press').animate({'opacity': 0}, 6000);
-		$('#press').hide();
-		$('#upcoming-shows').hide();
 		$('#cast-crew').show();
 		$('#cast-crew').animate({'opacity': 1}, 6000);
+		$('#press').hide();
+		$('#upcoming-shows').hide();
 	}
 
 	function showPast() {

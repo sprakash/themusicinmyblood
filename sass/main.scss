@@ -11,12 +11,14 @@ body {
     background-color: black;
 }
 
-audio {
+#musicplayer {
     display: inline-block;
     position: fixed;
     bottom: 6px;
     z-index: 12;
 }
+
+
 .content-area {
 	width: 100%;
     display: flex;
@@ -96,20 +98,26 @@ audio {
 }
 
 .swoosh-container {
-    width: 100%;
-    top: -10px;
-    position: relative;
-    border:1px solid white;
+    width: 37%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+        width: 100% !important;
+    }
+
+    @media (min-width: 1824px) {
+        width: 20% !important;
+    }
 }
 
 .swoosh {
 	background-image: url(/assets/swoosh-2.png);
 	background-repeat: no-repeat;
-    //left: 30%; 
+    //background-position: center 0;
     height: 10px;
-    display: none;
-   // text-align: center;
-    margin: 0 auto;
+    display: block;
+    padding: .5em 0;
+    width: 1px;;
 }
 
 .prev-next {
@@ -857,7 +865,7 @@ audio {
 #cast-crew{	
     background-color: #1D232F;
     width: 100%;
-    display: block;
+    display: none;
     height: auto;
 
     h3 {
