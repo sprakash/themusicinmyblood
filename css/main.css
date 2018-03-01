@@ -468,15 +468,18 @@ audio {
     .motif {
       max-width: 50% !important; } }
 
+.swoosh-container {
+  width: 100%;
+  top: -10px;
+  position: relative;
+  border: 1px solid white; }
+
 .swoosh {
   background-image: url(/assets/swoosh-2.png);
   background-repeat: no-repeat;
-  left: 30%;
-  position: relative;
   height: 10px;
   display: none;
-  width: 100%;
-  top: -10px; }
+  margin: 0 auto; }
 
 .prev-next {
   display: block;

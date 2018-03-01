@@ -95,15 +95,21 @@ audio {
 
 }
 
+.swoosh-container {
+    width: 100%;
+    top: -10px;
+    position: relative;
+    border:1px solid white;
+}
+
 .swoosh {
 	background-image: url(/assets/swoosh-2.png);
 	background-repeat: no-repeat;
-    left: 30%; 
-    position: relative;
+    //left: 30%; 
     height: 10px;
     display: none;
-    width: 100%;
-    top: -10px;
+   // text-align: center;
+    margin: 0 auto;
 }
 
 .prev-next {

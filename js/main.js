@@ -53,7 +53,7 @@ $(document).ready(function(){
 	else {
 		$('#cast-crew').hide();
 		setTimeout(growRedline(),1000);
-		setTimeout(function(){ beginCharacters() }, 7000);
+		//setTimeout(function(){ beginCharacters() }, 7000);
 	}
 
 
