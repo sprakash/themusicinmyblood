@@ -16,6 +16,14 @@ $(document).ready(function(){
 	    }
 	};
 
+	var pageUrlSupport = window.location.href;
+	console.log(pageUrlSupport);
+	if(pageUrlSupport.split("/")[1] == "support"){
+		location.href= '/support.html';
+	}
+
+
+
 	/*http://dummy.com/?technology=jquery&blog=jquerybyexample.
 
 		var tech = getUrlParameter('technology');
